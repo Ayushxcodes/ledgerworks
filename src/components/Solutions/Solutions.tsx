@@ -62,6 +62,7 @@ const Solution = () => {
     <div className="max-w-(--breakpoint-xl) mx-auto py-10 lg:py-16 px-6 xl:px-0 flex flex-col lg:flex-row items-start gap-12">
       <div>
         <div className="space-y-12">
+          
           {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
             <Card
               key={i}

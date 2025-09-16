@@ -31,19 +31,21 @@ const Hero04 = () => {
             handle the numbers.
           </p>
           <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-            <Button
-              size="lg"
-              className="rounded-full text-base w-full sm:w-auto"
-            >
-              Get Started <ArrowUpRight className="h-5 w-5 ml-1" />
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="rounded-full text-base shadow-none w-full sm:w-auto"
-            >
-              <CirclePlay className="h-5 w-5 mr-2" /> Book a Consultation
-            </Button>
+            <button className="relative inline-flex w-full sm:w-auto h-12 overflow-hidden rounded-full p-[4px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
+              <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+              <span className="inline-flex h-full w-full items-center justify-center rounded-full bg-slate-950 px-6 text-base font-medium text-white backdrop-blur-3xl">
+                Get Started <ArrowUpRight className="h-5 w-5 ml-2" />
+              </span>
+            </button>
+            <button className="relative inline-flex w-full sm:w-auto h-12 overflow-hidden rounded-full p-[2px] focus:outline-none">
+      {/* Animated gradient border */}
+      <span className="absolute inset-[-1000%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#1e293b_0%,#475569_50%,#1e293b_100%)] opacity-70" />
+      
+      {/* Inner button (Shadcn style) */}
+      <span className="inline-flex h-full w-full items-center justify-center rounded-full bg-background px-6 text-base font-medium text-foreground backdrop-blur-sm">
+        <CirclePlay className="h-5 w-5 mr-2" /> Book a Consultation
+      </span>
+      </button>
           </div>
         </div>
 
