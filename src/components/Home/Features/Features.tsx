@@ -5,36 +5,37 @@ import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { IconBrandYoutubeFilled } from "@tabler/icons-react";
+import { Cover } from "@/components/ui/cover";
+import { PinContainer } from "@/components/ui/3d-pin";
 
 export function Features() {
   const features = [
     {
-      title: "Track issues effectively",
+      title: "Streamlined Accounting",
       description:
-        "Track and manage your project issues with ease using our intuitive interface.",
+        "Manage your books with precision and efficiency using LedgerWorks’ modern accounting systems.",
       skeleton: <SkeletonOne />,
       className:
         "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
     },
     {
-      title: "Capture pictures with AI",
+      title: "Tax Strategy & Compliance",
       description:
-        "Capture stunning photos effortlessly using our advanced AI technology.",
+        "Stay compliant and minimize tax burdens with expert Chartered Accountant guidance tailored to your business.",
       skeleton: <SkeletonTwo />,
       className: "border-b col-span-1 lg:col-span-2 dark:border-neutral-800",
     },
     {
-      title: "Watch our AI on YouTube",
+      title: "Business Advisory",
       description:
-        "Whether its you or Tyler Durden, you can get to know about our product on YouTube",
+        "From growth planning to financial forecasting, LedgerWorks provides insights that help your business thrive.",
       skeleton: <SkeletonThree />,
-      className:
-        "col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800",
+      className: "col-span-1 lg:col-span-3 lg:border-r dark:border-neutral-800",
     },
     {
-      title: "Deploy in seconds",
+      title: "Cloud Accounting Solutions",
       description:
-        "With our blazing fast, state of the art, cutting edge, we are so back cloud servies (read AWS) - you can deploy your model in seconds.",
+        "Access your financials anywhere with our secure, cloud-based accounting solutions.",
       skeleton: <SkeletonFour />,
       className: "col-span-1 lg:col-span-3 border-b lg:border-none",
     },
@@ -108,12 +109,10 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
 export const SkeletonOne = () => {
   return (
     <div className="relative flex py-8 px-2 gap-10 h-full">
-      <div className="w-full  p-5  mx-auto bg-zinc-600 dark:bg-neutral-900 shadow-2xl group h-full">
-        <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
-          {/* TODO */}
+     
+          <CoverDemo />
           
-        </div>
-      </div>
+       
 
       <div className="absolute bottom-0 z-40 inset-x-0 h-60 bg-gradient-to-t from-white dark:from-black via-white dark:via-black to-transparent w-full pointer-events-none" />
       <div className="absolute top-0 z-40 inset-x-0 h-60 bg-gradient-to-b from-white dark:from-black via-transparent to-transparent w-full pointer-events-none" />
@@ -142,67 +141,15 @@ export const SkeletonThree = () => {
 
 
 export const SkeletonTwo = () => {
-  const images = [
-    "https://images.unsplash.com/photo-1517322048670-4fba75cbbb62?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1573790387438-4da905039392?q=80&w=3425&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1554931670-4ebfabf6e7a9?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1546484475-7f7bd55792da?q=80&w=2581&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  ];
-
-  const imageVariants = {
-    whileHover: {
-      scale: 1.1,
-      rotate: 0,
-      zIndex: 100,
-    },
-    whileTap: {
-      scale: 1.1,
-      rotate: 0,
-      zIndex: 100,
-    },
-  };
   return (
-    <div className="relative flex flex-col items-start p-8 gap-10 h-full overflow-hidden">
-      {/* TODO */}
-      <div className="flex flex-row -ml-20">
-        {images.map((image, idx) => (
-          <motion.div
-            variants={imageVariants}
-            key={"images-first" + idx}
-            style={{
-              rotate: Math.random() * 20 - 10,
-            }}
-            whileHover="whileHover"
-            whileTap="whileTap"
-            className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 shrink-0 overflow-hidden"
-          >
-           
-          </motion.div>
-        ))}
+    <div className="relative flex flex-col items-start p-0 gap-10 h-full overflow-hidden">
+      <div className="w-full h-full max-h-[400px] overflow-hidden flex items-center justify-center">
+        <AnimatedPinDemo />
       </div>
-      <div className="flex flex-row">
-        {images.map((image, idx) => (
-          <motion.div
-            key={"images-second" + idx}
-            style={{
-              rotate: Math.random() * 20 - 10,
-            }}
-            variants={imageVariants}
-            whileHover="whileHover"
-            whileTap="whileTap"
-            className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 shrink-0 overflow-hidden"
-          >
-            
-          </motion.div>
-        ))}
-      </div>
-
-      <div className="absolute left-0 z-[100] inset-y-0 w-20 bg-gradient-to-r from-white dark:from-black to-transparent  h-full pointer-events-none" />
-      <div className="absolute right-0 z-[100] inset-y-0 w-20 bg-gradient-to-l from-white dark:from-black  to-transparent h-full pointer-events-none" />
     </div>
   );
 };
+
 
 export const SkeletonFour = () => {
   return (
@@ -276,3 +223,42 @@ export const Globe = ({ className }: { className?: string }) => {
     />
   );
 };
+
+
+
+
+export function CoverDemo() {
+  return (
+    <div>
+      <h1
+        className="text-4xl md:text-4xl lg:text-6xl font-bold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-r from-black via-purple-700 to-purple-500">
+       Empowering Businesses
+        <br />
+        with<Cover>Chartered Accounting</Cover>
+      </h1>
+    </div>
+  );
+}
+
+
+
+export function AnimatedPinDemo() {
+  return (
+    <div className="h-[40rem] w-full flex items-center justify-center">
+      <PinContainer title="ledgerworks.com" href="https://ledgerworks.com">
+        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem]">
+          <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
+            LedgerWorks
+          </h3>
+          <div className="text-base !m-0 !p-0 font-normal">
+            <span className="text-slate-500">
+              Chartered Accounting solutions for businesses — from tax strategy
+              to cloud-based accounting.
+            </span>
+          </div>
+          <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-purple-700 via-indigo-600 to-blue-600" />
+        </div>
+      </PinContainer>
+    </div>
+  );
+}
