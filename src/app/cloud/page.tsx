@@ -1,10 +1,10 @@
-import Cloud from '@/components/Cloud/Cloud'
+import  { BackgroundLinesDemo } from '@/components/Cloud/Cloud'
 import React from 'react'
 
 const Cloudpage = () => {
   return (
     <div>
-      <Cloud />
+      <BackgroundLinesDemo />
     </div>
   )
 }
