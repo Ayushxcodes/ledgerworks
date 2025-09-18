@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export function Globe() {
   return (
-    <div className=" py-40 dark:bg-black bg-white w-full">
+    <div className=" py-22 dark:bg-black bg-white w-full">
       <div className="max-w-7xl mx-auto text-center">
         <p className="font-bold text-xl md:text-4xl dark:text-white text-black">
           Remote{" "}
@@ -22,10 +22,11 @@ export function Globe() {
             ))}
           </span>
         </p>
-        <p className="text-sm md:text-lg text-neutral-500 max-w-2xl mx-auto py-4">
-          Break free from traditional boundaries. Work from anywhere, at the
-          comfort of your own studio apartment. Perfect for Nomads and
-          Travellers.
+        <p className="mt-4 max-w-[60ch] mx-auto lg:mx-0 text-base md:text-lg text-muted-foreground">
+          Work without borders. Our secure cloud platform gives you instant
+          access to your financial records anytime, anywhere—delivering
+          real-time insights and seamless collaboration with the precision,
+          professionalism, and confidentiality of a boutique firm.
         </p>
       </div>
       <WorldMap

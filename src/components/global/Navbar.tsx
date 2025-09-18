@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/navbar-menu";
+import { HoveredLink, Menu, MenuItem } from "../ui/navbar-menu";
 import { cn } from "@/lib/utils";
 
 export function NavbarMain() {
   return (
     <div className="relative w-full flex items-center justify-center">
-      <Navbar className="top-2" />
+      <Navbar />
     </div>
   );
 }
@@ -15,7 +15,11 @@ function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
   return (
     <div
-      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+      className={cn(
+        // Stick to the top without extra offset
+        "fixed top-0 inset-x-0 max-w-2xl mx-auto z-50",
+        className
+      )}
     >
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Home">
@@ -26,22 +30,22 @@ function Navbar({ className }: { className?: string }) {
             <HoveredLink href="/branding">Branding</HoveredLink>
           </div>
         </MenuItem>
+
         <MenuItem setActive={setActive} active={active} item="About">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/web-dev">Web Development</HoveredLink>
-            <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-            <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
+            <HoveredLink href="/team">Team</HoveredLink>
+            <HoveredLink href="/clients">Clients</HoveredLink>
             <HoveredLink href="/branding">Branding</HoveredLink>
           </div>
         </MenuItem>
+
         <MenuItem setActive={setActive} active={active} item="Services">
           <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/solutions">Solution</HoveredLink>
-            <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-            <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-            <HoveredLink href="/branding">Branding</HoveredLink>
+            <HoveredLink href="/cloud">Cloud accounting</HoveredLink>
+            <HoveredLink href="/tax">Tax strategy</HoveredLink>
           </div>
         </MenuItem>
+
         <MenuItem setActive={setActive} active={active} item="Details">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/contact">Contact</HoveredLink>
