@@ -45,8 +45,9 @@ const item: Variants = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: [0.17, 0.55, 0.55, 1] }, // "easeOut" cubic-bezier
-  },};
+    transition: { duration: 0.6, ease: [0.17, 0.55, 0.55, 1] },
+  },
+};
 
 const TaxStrategy = () => {
   return (
@@ -76,8 +77,14 @@ const TaxStrategy = () => {
         className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full"
       >
         {services.map(({ title, description, icon: Icon }) => (
-          <motion.div key={title} variants={item}>
-            <Card className="rounded-2xl shadow-sm hover:shadow-md transition-all border">
+          <motion.div
+            key={title}
+            variants={item}
+            whileHover={{ scale: 1.05, y: -5 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+          >
+            <Card className="rounded-2xl shadow-sm hover:shadow-lg transition-all border cursor-pointer">
               <CardContent className="p-6 flex flex-col items-start text-left">
                 <Icon className="h-10 w-10 text-muted-foreground mb-4" />
                 <h3 className="text-xl font-semibold mb-2">{title}</h3>

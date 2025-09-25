@@ -34,7 +34,7 @@ const faq = [
   },
 ];
 
-const words = [{ text: "Join" }, { text: "LedgerWorks" }, { text: "Today" }];
+const words = [{ text: "Join" }, { text: "LedgerWorks" },];
 
 const Company = () => {
   return (

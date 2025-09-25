@@ -1,4 +1,4 @@
-import TaxStrategy from '@/components/Tax/Tax'
+import  TaxStrategy from '@/components/Tax/Tax'
 import React from 'react'
 
 const taxpage = () => {
