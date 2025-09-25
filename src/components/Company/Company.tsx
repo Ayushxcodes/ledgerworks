@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 
 const faq = [
   {
@@ -33,13 +34,18 @@ const faq = [
   },
 ];
 
+const words = [{ text: "Join" }, { text: "LedgerWorks" }, { text: "Today" }];
+
 const Company = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center px-6 py-12">
-      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div
+      className="flex items-start justify-center px-6"
+      style={{ minHeight: "calc(100vh - 5rem)" }} // 👈 adjust 5rem = navbar height
+    >
+      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-12 py-12">
         {/* Left: Accordion */}
         <div>
-          <h2 className="text-4xl md:text-5xl leading-[1.15]! font-semibold tracking-tighter">
+          <h2 className="text-4xl md:text-5xl font-semibold tracking-tighter">
             Questions & Answers
           </h2>
           <Accordion
@@ -61,10 +67,25 @@ const Company = () => {
           </Accordion>
         </div>
 
-        {/* Right: Empty for now */}
-        <div className="flex items-center justify-center border border-dashed rounded-lg p-6 text-muted-foreground">
-          {/* You can replace this with your own content */}
-          <p>Right side content goes here</p>
+        {/* Right: Hero Section */}
+        <div className="flex items-center justify-center">
+          <div className="flex flex-col items-center justify-center w-full h-full px-4 text-center">
+            <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base mb-2">
+              Ledger Works empowers businesses with accurate books, timely
+              compliance, and clear financial insights for confident growth
+            </p>
+
+            <TypewriterEffectSmooth words={words} />
+
+            <div className="mt-6 flex flex-col md:flex-row gap-4">
+              <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">
+                Join now
+              </button>
+              <button className="w-40 h-10 rounded-xl bg-white text-black border border-black text-sm">
+                Signup
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
