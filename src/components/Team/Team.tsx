@@ -12,7 +12,7 @@ import {
 
 const teamMembers = [
   {
-    name: "Shourya Gupta",
+    name: "Shourya Gupta (CA)",
     title: "Chartered Accountant",
     bio: "Qualified Chartered Accountant with decade of professional experience.",
     details: [
@@ -34,7 +34,7 @@ const teamMembers = [
       },
     ],
     imageUrl:
-      "https://images.pexels.com/photos/210241/pexels-photo-210241.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "/image1.jpg",
   },
   {
     name: "John Doe",
