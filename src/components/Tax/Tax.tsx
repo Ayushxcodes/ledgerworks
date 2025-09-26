@@ -29,7 +29,7 @@ const features = [
     more: `Delivered 100% virtually across the US with audit-defensible documentation. 
            Start with a tax advisory subscription and integrate bookkeeping and accounting 
            advisory as needed.`,
-    image: "/tax_virtual.png",
+    image: "/tax_growth.jpg",
   },
   {
     category: "Year-Round Planning",
@@ -38,7 +38,7 @@ const features = [
       "Delivered 100% virtually across the US with audit-defensible documentation. Start with a tax advisory subscription and integrate bookkeeping and accounting advisory as needed.",
     more: `Our team coordinates tax planning with monthly accounting, ensuring 
            strategies are executed in real time, not just presented in a slide deck.`,
-    image: "/tax_year.png",
+    image: "/tax_year.jpg",
   },
   {
     category: "Maximizing Every Dollar",
@@ -47,7 +47,7 @@ const features = [
       "As an entrepreneur, you know every dollar counts. Strategic tax strategies can be the most important investment you make in your business.",
     more: `By leveraging tax code opportunities, entity structuring, and proactive planning, 
            we maximize your savings and reinvest those dollars into growth.`,
-    image: "/dollar.png",
+    image: "/dollar.jpg",
   },
   {
     category: "Tailored Tax Solutions",
