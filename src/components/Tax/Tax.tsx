@@ -1,123 +1,204 @@
 "use client";
 
-import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, FileText, LineChart, Shield } from "lucide-react";
-import { motion, Variants } from "framer-motion";
+import { useState } from "react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { motion } from "framer-motion";
 
-const services = [
+const features = [
   {
+    category: "Virtual Tax Strategy",
+    title: "For US Business Owners & Real Estate Investors",
+    details:
+      "Deviating from the norm – year-round tax strategy and implementation. Entity choice and compensation, multi-state nexus, QSBS (§1202), §41/R&D, and real estate strategies (REPS, cost segregation, STR rules). Coordinated with monthly accounting so savings actually hit the return, not just a slide deck.",
+    more: `Delivered 100% virtually across the US with audit-defensible documentation. 
+           Start with a tax advisory subscription and integrate bookkeeping and accounting 
+           advisory as needed.`,
+    image: "/tax_virtual.png",
+  },
+  {
+    category: "Year-Round Planning",
+    title: "Execution-Backed Tax Strategies",
+    details:
+      "Delivered 100% virtually across the US with audit-defensible documentation. Start with a tax advisory subscription and integrate bookkeeping and accounting advisory as needed.",
+    more: `Our team coordinates tax planning with monthly accounting, ensuring 
+           strategies are executed in real time, not just presented in a slide deck.`,
+    image: "/tax_year.png",
+  },
+  {
+    category: "Maximizing Every Dollar",
     title: "Strategic Tax Planning",
-    description:
-      "Customized tax strategies designed to reduce liabilities and optimize cash flow while ensuring compliance.",
-    icon: LineChart,
+    details:
+      "As an entrepreneur, you know every dollar counts. Strategic tax strategies can be the most important investment you make in your business.",
+    more: `By leveraging tax code opportunities, entity structuring, and proactive planning, 
+           we maximize your savings and reinvest those dollars into growth.`,
+    image: "/dollar.png",
   },
   {
-    title: "Compliance & Reporting",
-    description:
-      "Accurate and timely filings for corporate, partnership, and individual tax returns across multiple jurisdictions.",
-    icon: FileText,
+    category: "Tailored Tax Solutions",
+    title: "Proactive Financial Management",
+    details:
+      "At LedgerWorks, we empower clients with comprehensive review and planning, delivering high-impact tax strategies tailored to your unique situation. Identify, implement, and report seamlessly.",
+    more: `We don’t stop at advice — we help you implement changes in real time, 
+           monitor impact, and ensure reporting is accurate for compliance and audit protection.`,
+    image: "/tax_tailored.jpg",
   },
   {
-    title: "Risk Management",
-    description:
-      "Identify tax risks, strengthen controls, and build audit-ready documentation for peace of mind.",
-    icon: Shield,
-  },
-  {
-    title: "Advisory & Guidance",
-    description:
-      "Proactive advice tailored to evolving tax laws, helping you make smarter financial decisions.",
-    icon: CheckCircle,
+    category: "Exceptional ROI",
+    title: "Tax Planning with a Satisfaction Guarantee",
+    details:
+      "Our Advanced Tax Strategy Advisory has delivered an average ROI of 250%+, across startups, real estate investors, and digital firms. Led by Greg O’Brien, named the #1 Tax Strategist in the US in 2023.",
+    more: `Our strategies are backed by proven results, industry recognition, 
+           and an average ROI of 250%+. We ensure you pay the least tax legally possible.`,
+    image: "/tax_roi.jpg",
   },
 ];
 
-// Animation variants
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: { staggerChildren: 0.15 },
+const taxFaqs = [
+  {
+    question:
+      "What unique approach does LedgerWorks take toward tax strategy and planning?",
+    answer:
+      "LedgerWorks goes beyond traditional tax planning by integrating year-round strategic planning and implementation, ensuring businesses maximize every tax opportunity with customized strategies. This approach led to LedgerWorks being recognized as a top tax strategist in the US in 2023 by the AICTC.",
   },
-};
-
-const item: Variants = {
-  hidden: { opacity: 0, y: 25 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: [0.17, 0.55, 0.55, 1] },
+  {
+    question: "Who can benefit most from LedgerWorks tax planning services?",
+    answer:
+      "Business owners with consistent profits, real estate investors expanding their portfolios, high-growth startups planning for exits, and high-net-worth individuals are ideal candidates for LedgerWorks tax planning services.",
   },
-};
+  {
+    question: "Do you implement §41/R&D tax credit studies?",
+    answer:
+      "Yes, we offer research & development tax credit studies for a flat price. Credentialed CPAs perform the study and sign your tax returns, avoiding unnecessary fees from non-credentialed providers.",
+  },
+];
 
 const TaxStrategy = () => {
+  const [open, setOpen] = useState<number | null>(null);
+
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center px-6 py-16 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-black overflow-hidden">
-      {/* Hero */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="relative max-w-3xl text-center mb-16"
-      >
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-          Tax Strategy Services
-        </h1>
-        <p className="text-lg text-muted-foreground">
-          Our tailored tax strategies go beyond compliance—preserving wealth,
-          optimizing efficiency, and positioning your business for lasting
-          success.
-        </p>
-      </motion.div>
+    <motion.div
+      className="flex flex-col items-center justify-center px-4 py-19 sm:px-6 md:px-12 lg:px-24"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+      <div className="max-w-7xl w-full">
+        {/* Hero */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12 md:mb-16"
+        >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight sm:max-w-xl sm:mx-auto">
+            Strengthen Your Strategy
+          </h2>
+          <p className="mt-3 text-muted-foreground text-lg sm:text-xl">
+            Enhance your strategy with intelligent tools designed for success.
+          </p>
+        </motion.div>
 
-      {/* Services Grid */}
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full"
-      >
-        {services.map(({ title, description, icon: Icon }) => (
-          <motion.div
-            key={title}
-            variants={item}
-            whileHover={{ scale: 1.05, y: -5 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          >
-            <Card className="rounded-2xl shadow-sm hover:shadow-lg transition-all border cursor-pointer">
-              <CardContent className="p-6 flex flex-col items-start text-left">
-                <Icon className="h-10 w-10 text-muted-foreground mb-4" />
-                <h3 className="text-xl font-semibold mb-2">{title}</h3>
-                <p className="text-muted-foreground">{description}</p>
-              </CardContent>
-            </Card>
-          </motion.div>
-        ))}
-      </motion.div>
+        {/* Features */}
+        <div className="space-y-12 md:space-y-20">
+          {features.map((feature, idx) => (
+            <motion.div
+              key={feature.category}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: idx * 0.2 }}
+              className="flex flex-col md:flex-row items-center gap-x-8 gap-y-6 md:even:flex-row-reverse"
+            >
+              <div className="w-full aspect-[4/4] rounded-xl border border-border/50 basis-1/2 overflow-hidden relative">
+                <Image
+                  src={feature.image}
+                  alt={feature.title}
+                  fill
+                  className="object-cover"
+                  priority={idx === 0}
+                />
+              </div>
 
-      {/* CTA */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        className="mt-16 text-center"
-      >
-        <h2 className="text-2xl font-semibold mb-4">
-          Ready to optimize your tax strategy?
-        </h2>
-        <p className="text-muted-foreground mb-6">
-          Let us partner with you to build a sustainable, growth-focused plan.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="px-6 py-3 rounded-xl bg-black text-white text-sm hover:bg-neutral-800 transition">
-            Book a Consultation
-          </button>
-          <button className="px-6 py-3 rounded-xl bg-white text-black border text-sm hover:bg-neutral-100 transition dark:bg-transparent dark:hover:bg-neutral-800">
-            Learn More
-          </button>
+              <div className="basis-1/2 shrink-0 text-center md:text-left">
+                <span className="uppercase font-medium text-sm text-muted-foreground">
+                  {feature.category}
+                </span>
+                <h4 className="my-3 text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight">
+                  {feature.title}
+                </h4>
+                <p className="text-muted-foreground text-sm sm:text-base md:text-lg">
+                  {feature.details}
+                </p>
+
+                <Dialog
+                  open={open === idx}
+                  onOpenChange={(o) => setOpen(o ? idx : null)}
+                >
+                  <DialogTrigger asChild>
+                    <Button
+                      size="lg"
+                      className="mt-4 md:mt-6 rounded-full gap-3"
+                    >
+                      Learn More <ArrowRight />
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-lg">
+                    <DialogHeader>
+                      <DialogTitle>{feature.title}</DialogTitle>
+                      <DialogDescription>{feature.category}</DialogDescription>
+                    </DialogHeader>
+                    <div className="mt-4 text-sm sm:text-base text-muted-foreground space-y-4">
+                      <p>{feature.more}</p>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </motion.div>
+          ))}
         </div>
-      </motion.div>
-    </div>
+
+        {/* FAQ Accordion */}
+        <motion.div
+          className="max-w-3xl mx-auto mt-16 px-2 sm:px-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 text-center">
+            FAQ
+          </h3>
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {taxFaqs.map((faq, idx) => (
+              <AccordionItem key={idx} value={`faq-${idx}`}>
+                <AccordionTrigger className="text-lg sm:text-xl md:text-2xl">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="flex flex-col gap-4 text-base sm:text-lg text-muted-foreground">
+                  <p>{faq.answer}</p>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </motion.div>
+      </div>
+    </motion.div>
   );
 };
 

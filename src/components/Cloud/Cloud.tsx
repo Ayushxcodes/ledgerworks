@@ -1,5 +1,11 @@
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export function CloudAccountingTimeline() {
   const data = [
@@ -94,8 +100,89 @@ export function CloudAccountingTimeline() {
   ];
 
   return (
-    <div className="relative w-full overflow-clip">
+    <div className="relative w-full overflow-clip py-15">
+      {/* Timeline */}
       <Timeline data={data} />
+
+      {/* FAQ Section */}
+      <div className="max-w-3xl mx-auto mt-20 px-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-6">
+          Cloud Accounting FAQ
+        </h2>
+
+        <Accordion
+          type="single"
+          collapsible
+          className="w-full"
+          defaultValue="item-1"
+        >
+          <AccordionItem value="item-1">
+            <AccordionTrigger>
+              What services are included in LedgerWorks cloud accounting
+              package?
+            </AccordionTrigger>
+            <AccordionContent className="text-neutral-700 dark:text-neutral-300">
+              LedgerWorks offers a comprehensive suite of cloud accounting
+              services for growing businesses, including full cycle accounting
+              management, bookkeeping, dynamic financial reporting, bill pay,
+              accounts receivable management, and payroll oversight.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-2">
+            <AccordionTrigger>
+              How does cloud accounting benefit growing startups and digital
+              businesses?
+            </AccordionTrigger>
+            <AccordionContent className="text-neutral-700 dark:text-neutral-300">
+              Cloud accounting with LedgerWorks streamlines back-office
+              operations, allowing startups and digital businesses to focus on
+              growth and innovation by outsourcing complex accounting tasks and
+              gaining insights into financial performance.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-3">
+            <AccordionTrigger>
+              What types of businesses can benefit from LedgerWorks cloud
+              accounting services?
+            </AccordionTrigger>
+            <AccordionContent className="text-neutral-700 dark:text-neutral-300">
+              LedgerWorks cloud accounting services are tailored for various
+              business needs, including scaling digital businesses, real estate
+              investors & funds, and high-growth startups looking to raise
+              outside capital.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-4">
+            <AccordionTrigger>
+              What is the starting price for LedgerWorks cloud accounting
+              services?
+            </AccordionTrigger>
+            <AccordionContent className="text-neutral-700 dark:text-neutral-300">
+              LedgerWorks offers cloud accounting services starting at
+              <span className="font-semibold"> $500/month</span>. Each
+              business’s needs vary, so we ensure you are provided with the
+              appropriate level of accounting and bookkeeping support based on
+              our experience.
+            </AccordionContent>
+          </AccordionItem>
+
+          <AccordionItem value="item-5">
+            <AccordionTrigger>
+              How does LedgerWorks support businesses in scaling and managing
+              financial complexity?
+            </AccordionTrigger>
+            <AccordionContent className="text-neutral-700 dark:text-neutral-300">
+              LedgerWorks assists businesses in scaling by providing tailored
+              back-office solutions, helping manage financial complexities like
+              GAAP and accrual accounting, and supporting startups from
+              formation through to potential exits.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </div>
     </div>
   );
 }
