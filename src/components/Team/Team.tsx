@@ -12,7 +12,7 @@ import {
 
 const teamMembers = [
   {
-    name: "Shourya Gupta (CA)",
+    name: "Shourya Yadav (CA)",
     title: "Chartered Accountant",
     bio: "Qualified Chartered Accountant with decade of professional experience.",
     details: [
