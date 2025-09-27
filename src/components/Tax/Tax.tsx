@@ -84,9 +84,10 @@ const taxFaqs = [
   {
     question: "Do you implement §41/R&D tax credit studies?",
     answer:
-      "Yes, we offer research & development tax credit studies for a flat price. Credentialed CPAs perform the study and sign your tax returns, avoiding unnecessary fees from non-credentialed providers.",
+      "Yes, we offer research & development tax credit studies for a flat price. Credentialed Chartered Accountants or IRS Enrolled Agents perform the study and sign your tax returns, avoiding unnecessary fees from non-credentialed providers.",
   },
 ];
+
 
 const TaxStrategy = () => {
   const [open, setOpen] = useState<number | null>(null);
