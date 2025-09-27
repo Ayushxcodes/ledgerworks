@@ -313,14 +313,14 @@ export function CardSpotlightDemo() {
 
   return (
     <CardSpotlight
-      className="h-auto w-96 cursor-pointer p-4"
+      className="w-full max-w-md mx-auto cursor-pointer p-6 rounded-lg"
       onClick={toggleOpen} // tap to open on mobile
     >
       <motion.p
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-xl font-bold relative z-20 mt-2 text-white"
+        className="text-xl font-bold relative z-20 mt-2 text-white text-center"
       >
         Tax Strategy Steps
       </motion.p>
@@ -332,14 +332,14 @@ export function CardSpotlightDemo() {
         className="text-neutral-200 mt-4 relative z-20"
       >
         Follow these steps to optimize your taxes with LedgerWorks:
-        <ul className="list-none mt-2">
+        <ul className="list-none mt-2 space-y-2">
           {steps.map((step, index) => (
             <motion.li
               key={step}
               initial={{ opacity: 0, y: 10 }}
               animate={isOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="flex gap-2 items-start my-1"
+              className="flex gap-2 items-start"
             >
               <CheckIcon />
               <p className="text-white">{step}</p>
@@ -351,7 +351,7 @@ export function CardSpotlightDemo() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-sm text-blue-400 mt-2"
+            className="text-sm text-blue-400 mt-2 text-center"
           >
             Tap to view steps
           </motion.p>
@@ -359,7 +359,7 @@ export function CardSpotlightDemo() {
       </motion.div>
     </CardSpotlight>
   );
-}
+};
 
 const Step = ({ title }: { title: string }) => {
   return (
