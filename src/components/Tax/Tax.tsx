@@ -74,7 +74,7 @@ const taxFaqs = [
     question:
       "What unique approach does LedgerWorks take toward tax strategy and planning?",
     answer:
-      "LedgerWorks goes beyond traditional tax planning by integrating year-round strategic planning and implementation, ensuring businesses maximize every tax opportunity with customized strategies. This approach led to LedgerWorks being recognized as a top tax strategist in the US in 2023 by the AICTC.",
+      "LedgerWorks goes beyond traditional tax planning by integrating year-round strategic planning and implementation, ensuring businesses maximize every tax opportunity with customized strategies.",
   },
   {
     question: "Who can benefit most from LedgerWorks tax planning services?",
