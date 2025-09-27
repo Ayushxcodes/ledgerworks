@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { HoveredLink, Menu, MenuItem } from "../ui/navbar-menu";
 import { cn } from "@/lib/utils";
 
@@ -22,6 +23,17 @@ function Navbar({ className }: { className?: string }) {
       )}
     >
       <Menu setActive={setActive}>
+        {/* Logo just before Home */}
+        <div className="flex items-center px-2">
+          <Image
+            src="/logo.png"
+            alt="LedgerWorks Logo"
+            width={32}
+            height={32}
+            className="object-contain"
+          />
+        </div>
+
         <MenuItem setActive={setActive} active={active} item="Home">
           <div className="flex flex-col space-y-4 text-sm">
             <HoveredLink href="/">HomePage</HoveredLink>

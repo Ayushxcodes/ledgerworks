@@ -9,6 +9,7 @@ import { Cover } from "@/components/ui/cover";
 import { PinContainer } from "@/components/ui/3d-pin";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
+import Image from "next/image";
 
 export function Features() {
   const features = [
@@ -43,8 +44,18 @@ export function Features() {
     },
   ];
   return (
-    <div className="relative z-20 py-10 lg:py-15 max-w-7xl mx-auto">
+    <div className="relative z-20 py-10 lg:py-5 max-w-7xl mx-auto">
       <div className="px-8">
+        <div className="flex justify-center mb-6 lg:mb-8">
+          <Image
+            src="/fulllogo.png" // replace with your logo path
+            alt="LedgerWorks Logo"
+            width={400} // increased width
+            height={110} // increased height
+            className="h-auto w-[250px] sm:w-[300px] md:w-[350px] lg:w-[400px]"
+            priority // preloads the image
+          />
+        </div>
         <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
           Simplifying Finances, Empowering Growth
         </h4>
