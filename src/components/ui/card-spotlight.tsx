@@ -1,7 +1,11 @@
 "use client";
 
 import { useMotionValue, motion, useMotionTemplate } from "motion/react";
-import React, { MouseEvent as ReactMouseEvent, useState } from "react";
+import React, {
+  MouseEvent as ReactMouseEvent,
+  useState,
+  TouchEvent,
+} from "react";
 import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 import { cn } from "@/lib/utils";
 
@@ -18,20 +22,31 @@ export const CardSpotlight = ({
 } & React.HTMLAttributes<HTMLDivElement>) => {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
+
+  const [isHovering, setIsHovering] = useState(false);
+
   function handleMouseMove({
     currentTarget,
     clientX,
     clientY,
   }: ReactMouseEvent<HTMLDivElement>) {
     const { left, top } = currentTarget.getBoundingClientRect();
-
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
   }
 
-  const [isHovering, setIsHovering] = useState(false);
+  function handleTouchMove(event: TouchEvent<HTMLDivElement>) {
+    const touch = event.touches[0];
+    const { left, top } = event.currentTarget.getBoundingClientRect();
+    mouseX.set(touch.clientX - left);
+    mouseY.set(touch.clientY - top);
+  }
+
   const handleMouseEnter = () => setIsHovering(true);
   const handleMouseLeave = () => setIsHovering(false);
+
+  const handleClick = () => setIsHovering((prev) => !prev); // toggle on mobile tap
+
   return (
     <div
       className={cn(
@@ -41,6 +56,8 @@ export const CardSpotlight = ({
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onTouchStart={handleClick} // trigger on mobile tap
+      onTouchMove={handleTouchMove} // update spotlight on drag
       {...props}
     >
       <motion.div
