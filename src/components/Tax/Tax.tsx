@@ -62,7 +62,7 @@ const features = [
     category: "Exceptional ROI",
     title: "Tax Planning with a Satisfaction Guarantee",
     details:
-      "Our Advanced Tax Strategy Advisory has delivered an average ROI of 250%+, across startups, real estate investors, and digital firms. Led by Greg O’Brien, named the #1 Tax Strategist in the US in 2023.",
+      "Our Advanced Tax Strategy Advisory has delivered an average ROI of 250%+, across startups, real estate investors.",
     more: `Our strategies are backed by proven results, industry recognition, 
            and an average ROI of 250%+. We ensure you pay the least tax legally possible.`,
     image: "/tax_roi.jpg",
