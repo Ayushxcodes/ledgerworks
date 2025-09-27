@@ -10,6 +10,7 @@ import { PinContainer } from "@/components/ui/3d-pin";
 import { SparklesCore } from "@/components/ui/sparkles";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 import Image from "next/image";
+import { useState } from "react";
 
 export function Features() {
   const features = [
@@ -247,7 +248,7 @@ export function CoverDemo() {
 
 export function AnimatedPinDemo() {
   return (
-    <div className="h-[40rem] w-full flex items-center justify-center">
+    <div className="h-[45rem] w-full flex items-center justify-center">
       <PinContainer title="ledgerworks.com" href="https://ledgerworks.com">
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem]">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
@@ -298,21 +299,64 @@ export function SparklesPreview() {
 }
 
 export function CardSpotlightDemo() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const steps = [
+    "Comprehensive financial review",
+    "Identify tax-saving opportunities",
+    "Develop and implement tailored strategies",
+    "Ongoing monitoring and adjustments",
+    "Accurate tax reporting and compliance",
+  ];
+
+  const toggleOpen = () => setIsOpen((prev) => !prev);
+
   return (
-    <CardSpotlight className="h-96 w-96">
-      <p className="text-xl font-bold relative z-20 mt-2 text-white">
+    <CardSpotlight
+      className="h-auto w-96 cursor-pointer p-4"
+      onClick={toggleOpen} // tap to open on mobile
+    >
+      <motion.p
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="text-xl font-bold relative z-20 mt-2 text-white"
+      >
         Tax Strategy Steps
-      </p>
-      <div className="text-neutral-200 mt-4 relative z-20">
+      </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="text-neutral-200 mt-4 relative z-20"
+      >
         Follow these steps to optimize your taxes with LedgerWorks:
         <ul className="list-none mt-2">
-          <Step title="Comprehensive financial review" />
-          <Step title="Identify tax-saving opportunities" />
-          <Step title="Develop and implement tailored strategies" />
-          <Step title="Ongoing monitoring and adjustments" />
-          <Step title="Accurate tax reporting and compliance" />
+          {steps.map((step, index) => (
+            <motion.li
+              key={step}
+              initial={{ opacity: 0, y: 10 }}
+              animate={isOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+              className="flex gap-2 items-start my-1"
+            >
+              <CheckIcon />
+              <p className="text-white">{step}</p>
+            </motion.li>
+          ))}
         </ul>
-      </div>
+        {!isOpen && (
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="text-sm text-blue-400 mt-2"
+          >
+            Tap to view steps
+          </motion.p>
+        )}
+      </motion.div>
     </CardSpotlight>
   );
 }
