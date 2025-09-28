@@ -8,31 +8,32 @@ import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 
 const faq = [
   {
-    question: "What is your return policy?",
+    question: "What services does LedgerWorks provide?",
     answer:
-      "You can return unused items in their original packaging within 30 days for a refund or exchange. Contact support for assistance.",
+      "LedgerWorks specializes in bookkeeping, tax strategy, and financial advisory services for businesses across the US. We ensure accurate records, compliance, and proactive tax savings.",
   },
   {
-    question: "How do I track my order?",
+    question: "Do you work with businesses outside the US?",
     answer:
-      "Track your order using the link provided in your confirmation email, or log into your account to view tracking details.",
+      "Currently, LedgerWorks focuses on serving businesses and individuals within the United States to ensure full compliance with IRS regulations.",
   },
   {
-    question: "Do you ship internationally?",
+    question: "Who can benefit most from your services?",
     answer:
-      "Yes, we ship worldwide. Shipping fees and delivery times vary by location, and customs duties may apply for some countries.",
+      "Our services are ideal for business owners with consistent profits, real estate investors, startups preparing for growth or exit, and high-net-worth individuals seeking strategic tax planning.",
   },
   {
-    question: "What payment methods do you accept?",
+    question: "Do you help with year-round tax planning?",
     answer:
-      "We accept Visa, MasterCard, American Express, PayPal, Apple Pay, and Google Pay, ensuring secure payment options for all customers.",
+      "Yes. Unlike traditional firms, we integrate year-round tax strategy and implementation with monthly accounting so you maximize savings in real time, not just at year-end.",
   },
   {
-    question: "What if I receive a damaged item?",
+    question: "What makes LedgerWorks different from other firms?",
     answer:
-      "Please contact our support team within 48 hours of delivery with photos of the damaged item. We’ll arrange a replacement or refund.",
+      "We combine modern technology with expert Chartered Accountants, providing personalized solutions and proactive planning. Our strategies are backed by proven results and client satisfaction.",
   },
 ];
+
 
 const words = [{ text: "Join" }, { text: "LedgerWorks" },];
 
