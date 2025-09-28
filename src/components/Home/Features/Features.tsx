@@ -45,7 +45,7 @@ export function Features() {
     },
   ];
   return (
-    <div className="relative z-20 py-10 lg:py-5 max-w-7xl mx-auto">
+    <div className="relative z-20 py-10 lg:py-2 max-w-7xl mx-auto">
       <div className="px-8">
         <div className="flex justify-center mb-6 lg:mb-8">
           <Image
@@ -268,12 +268,22 @@ export function AnimatedPinDemo() {
 }
 
  
+
 export function SparklesPreview() {
   return (
     <div className="h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
-      <h1 className="md:text-7xl text-3xl lg:text-7xl font-bold text-center text-white relative z-20">
-        LedgerWorks
-      </h1>
+      {/* Replace text with Next.js Image */}
+      <div className="relative z-20">
+        <Image
+          src="/growth.png" // <- replace with your image path
+          alt="LedgerWorks Logo"
+          width={300} // adjust size
+          height={100}
+          className="object-contain"
+          priority
+        />
+      </div>
+
       <div className="w-[40rem] h-40 relative">
         {/* Gradients */}
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
@@ -297,6 +307,7 @@ export function SparklesPreview() {
     </div>
   );
 }
+
 
 export function CardSpotlightDemo() {
   const [isOpen, setIsOpen] = useState(false);
