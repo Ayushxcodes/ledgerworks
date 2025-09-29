@@ -36,7 +36,7 @@ const teamMembers = [
     imageUrl: "/image1.jpg",
   },
   {
-    name: "Nishant",
+    name: "Nishant Khemani",
     title: "Chartered Accountant",
     bio: "Experienced in Business Restructuring, Tax Advisory, and U.S. Taxation matters.",
     details: [
