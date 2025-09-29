@@ -273,7 +273,7 @@ export function AnimatedPinDemo() {
 
 export function SparklesPreview() {
   return (
-    <div className="h-[40rem] w-full bg-white flex items-center justify-center overflow-hidden rounded-md">
+    <div className="h-[30rem] w-full bg-white flex items-center justify-center overflow-hidden rounded-md">
       <Image
         src="/growth.gif" // <- replace with your image path
         alt="LedgerWorks Logo"
