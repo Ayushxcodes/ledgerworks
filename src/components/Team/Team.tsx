@@ -14,23 +14,23 @@ const teamMembers = [
   {
     name: "Shourya Yadav (CA)",
     title: "Chartered Accountant",
-    bio: "Qualified Chartered Accountant with decade of professional experience.",
+    bio: "Chartered Accountant with a decade of international experience across Big 4 firms.",
     details: [
       {
         heading: "Experience",
-        text: "Qualified Chartered Accountant with decade of professional experience of working with Deloitte USA & Ireland, PwC London as well as KPMG India. Shourya worked extensively with U.S. clients — supporting both small private companies as well as large SEC-listed corporations. Managing large scale global engagements provided unique ability to adopt diverse global clients need.",
+        text: "Worked with Deloitte USA & Ireland, PwC London, and KPMG India, supporting U.S. clients from startups to SEC-listed corporations.",
       },
       {
         heading: "Leadership",
-        text: "She also served as a Finance Lead at a U.S.-based startup, providing value-added services which inspired her passion for partnering with small businesses.",
+        text: "Served as Finance Lead at a U.S. startup, driving value-added services and strengthening her passion for supporting small businesses.",
       },
       {
         heading: "Expertise",
-        text: "Strong financial insights — accurate books, timely tax compliance & trusted financial insights placed Shourya in everlasting relationships with entrepreneurs, allowing them to focus on growth while she ensures their financials are managed with precision.",
+        text: "Delivers accurate financials, timely tax compliance, and actionable insights, enabling entrepreneurs to focus on growth.",
       },
       {
         heading: "Approach",
-        text: "Combining Big 4 expertise with a hands-on, client-focused approach, she is regarded as both a reliable advisor and a supportive partner in business success.",
+        text: "Blends Big 4 expertise with a hands-on, client-focused approach, earning trust as both an advisor and business partner.",
       },
     ],
     imageUrl: "/image1.jpg",
@@ -42,15 +42,22 @@ const teamMembers = [
     details: [
       {
         heading: "Experience",
-        text: "Nishant has previously worked at KPMG's International Taxation and Regulatory division.",
+        text: "Nishant has previously worked at KPMG's International Taxation and Regulatory division, where he supported multinational clients in restructuring and cross-border taxation projects.",
+      },
+      {
+        heading: "Leadership",
+        text: "He has led advisory assignments involving U.S. tax compliance for corporations, ensuring clients met global tax obligations with accuracy and timeliness.",
       },
       {
         heading: "Expertise",
-        text: "Specializes in US GAAP and advising clients on U.S. taxation-related matters.",
+        text: "Nishant specializes in US GAAP and provides strategic advisory on U.S. taxation matters, including compliance, reporting, and restructuring impacts.",
+      },
+      {
+        heading: "Approach",
+        text: "With a client-first approach, he combines technical expertise with practical solutions, helping businesses navigate complex U.S. tax regulations confidently.",
       },
     ],
-    imageUrl:
-      "/nishant.png",
+    imageUrl: "/nishant.png",
   },
   {
     name: "Pooja Bansal",
@@ -59,15 +66,22 @@ const teamMembers = [
     details: [
       {
         heading: "Experience",
-        text: "Pooja has extensive experience in tax advisory and international taxation.",
+        text: "Pooja has extensive experience in international taxation, having advised clients across industries on complex India–U.S. tax structures.",
+      },
+      {
+        heading: "Leadership",
+        text: "She has guided multinational clients through tax advisory engagements, managing DTAA-related issues and supporting corporate tax strategy.",
       },
       {
         heading: "Expertise",
-        text: "She advises clients on DTAA interpretation, GILTI implications, and U.S. corporate and individual taxation.",
+        text: "Her specialization includes DTAA interpretation, GILTI implications, transfer pricing, and U.S. corporate and individual taxation.",
+      },
+      {
+        heading: "Approach",
+        text: "Pooja combines analytical rigor with a solutions-oriented mindset, helping clients minimize risks while ensuring compliance across jurisdictions.",
       },
     ],
-    imageUrl:
-      "/pooja.png",
+    imageUrl: "/pooja.png",
   },
   {
     name: "Aman Agarwal",
@@ -76,17 +90,26 @@ const teamMembers = [
     details: [
       {
         heading: "Experience",
-        text: "Aman has an MBA in Finance and extensive experience in consulting on U.S. tax laws.",
+        text: "Aman has more than a decade of consulting experience, assisting U.S.-based corporations and individuals with their tax compliance and advisory needs.",
+      },
+      {
+        heading: "Leadership",
+        text: "He has led consulting teams delivering end-to-end U.S. tax solutions, including tax planning, IRS filings, and advisory for high-net-worth individuals.",
       },
       {
         heading: "Expertise",
-        text: "He is an expert in handling complex tax matters and filing tax returns with the IRS.",
+        text: "Aman’s expertise lies in handling complex U.S. tax matters, IRS compliance, and filing of federal and state returns with precision.",
+      },
+      {
+        heading: "Approach",
+        text: "By blending his CA background with an MBA in Finance, Aman delivers holistic solutions that combine regulatory compliance with business growth insights.",
       },
     ],
-    imageUrl:
-      "/aman.png",
+    imageUrl: "/aman.png",
   },
 ];
+
+
 
 
 const Team04Page = () => {
