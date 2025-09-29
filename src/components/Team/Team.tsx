@@ -33,61 +33,61 @@ const teamMembers = [
         text: "Combining Big 4 expertise with a hands-on, client-focused approach, she is regarded as both a reliable advisor and a supportive partner in business success.",
       },
     ],
-    imageUrl:
-      "/image1.jpg",
+    imageUrl: "/image1.jpg",
   },
   {
-    name: "John Doe",
-    title: "Founder & CEO",
-    bio: "Former co-founder of Opendoor. Early staff at Spotify and Clearbit.",
+    name: "Nishant",
+    title: "Chartered Accountant",
+    bio: "Experienced in Business Restructuring, Tax Advisory, and U.S. Taxation matters.",
     details: [
       {
         heading: "Experience",
-        text: "John has over 15 years of experience leading startups and scaling tech companies.",
+        text: "Nishant has previously worked at KPMG's International Taxation and Regulatory division.",
       },
       {
         heading: "Expertise",
-        text: "He’s passionate about building impactful products and mentoring future leaders.",
+        text: "Specializes in US GAAP and advising clients on U.S. taxation-related matters.",
       },
     ],
     imageUrl:
-      "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "/nishant.png",
   },
   {
-    name: "Jane Doe",
-    title: "Engineering Manager",
-    bio: "Lead engineering teams at Figma, Pitch, and Protocol Labs.",
+    name: "Pooja Bansal",
+    title: "Chartered Accountant",
+    bio: "Specialist in India–U.S. tax matters and international taxation.",
     details: [
       {
         heading: "Experience",
-        text: "Jane specializes in building engineering cultures that balance innovation and reliability.",
+        text: "Pooja has extensive experience in tax advisory and international taxation.",
       },
       {
-        heading: "Leadership",
-        text: "She has led global teams across three continents with proven results.",
+        heading: "Expertise",
+        text: "She advises clients on DTAA interpretation, GILTI implications, and U.S. corporate and individual taxation.",
       },
     ],
     imageUrl:
-      "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "/pooja.png",
   },
   {
-    name: "Bob Smith",
-    title: "Product Manager",
-    bio: "Former PM for Linear, Lambda School, and On Deck.",
+    name: "Aman Agarwal",
+    title: "Chartered Accountant, MBA (Finance)",
+    bio: "Over 10 years of consulting experience in U.S. Tax laws.",
     details: [
       {
-        heading: "Background",
-        text: "Bob has helped scale product teams and launch several high-growth products.",
+        heading: "Experience",
+        text: "Aman has an MBA in Finance and extensive experience in consulting on U.S. tax laws.",
       },
       {
-        heading: "Focus",
-        text: "He is focused on building user-first solutions and driving product strategy.",
+        heading: "Expertise",
+        text: "He is an expert in handling complex tax matters and filing tax returns with the IRS.",
       },
     ],
     imageUrl:
-      "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "/aman.png",
   },
 ];
+
 
 const Team04Page = () => {
   return (
@@ -102,10 +102,14 @@ const Team04Page = () => {
           and foster a culture that empowers you to do your best work.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row-reverse sm:justify-center gap-3">
-          <Button size="lg">Contact Us</Button>
-          <Button size="lg" variant="outline">
-            About Us
-          </Button>
+          <Link href="/contact">
+            <Button size="lg">Contact Us</Button>
+          </Link>
+          <Link href="/company">
+            <Button size="lg" variant="outline">
+              About Us
+            </Button>
+          </Link>
         </div>
       </div>
 
