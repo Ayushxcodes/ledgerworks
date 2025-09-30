@@ -14,15 +14,14 @@ export function CloudAccountingTimeline() {
       content: (
         <div>
           <p className="mb-4 text-sm text-neutral-800 dark:text-neutral-200">
-            Our foundational cloud accounting services to streamline your
-            financial operations:
+            Foundational accounting services designed for U.S. businesses:
           </p>
           <ul className="list-disc ml-5 space-y-2 text-neutral-700 dark:text-neutral-300">
-            <li>Bookkeeping & Ledger Management</li>
+            <li>Bookkeeping & General Ledger Management</li>
             <li>Accounts Payable & Receivable Management</li>
             <li>Bank Reconciliation & Cash Flow Monitoring</li>
-            <li>Multi-currency Transaction Management</li>
-            <li>Financial Reporting & Statement Preparation</li>
+            <li>Multi-entity & multi-currency accounting (where applicable)</li>
+            <li>Accurate Financial Reporting & Statement Preparation (GAAP compliant)</li>
           </ul>
         </div>
       ),
@@ -32,15 +31,14 @@ export function CloudAccountingTimeline() {
       content: (
         <div>
           <p className="mb-4 text-sm text-neutral-800 dark:text-neutral-200">
-            Ensure your business meets all regulatory and tax obligations
-            effortlessly:
+            Stay compliant with federal, state, and local tax requirements:
           </p>
           <ul className="list-disc ml-5 space-y-2 text-neutral-700 dark:text-neutral-300">
-            <li>Automated Tax Calculation & Filing</li>
-            <li>VAT/GST/Income Tax Compliance</li>
-            <li>Preparation & Submission of Statutory Returns</li>
-            <li>Tax Planning & Advisory Services</li>
-            <li>Audit Support & Documentation</li>
+            <li>Federal and state business tax filings</li>
+            <li>Quarterly estimated tax payments</li>
+            <li>Entity-specific compliance (LLC, S-Corp, C-Corp, Partnerships)</li>
+            <li>Audit preparation and representation</li>
+            <li>Ongoing tax planning & advisory</li>
           </ul>
         </div>
       ),
@@ -50,7 +48,7 @@ export function CloudAccountingTimeline() {
       content: (
         <div>
           <p className="mb-4 text-sm text-neutral-800 dark:text-neutral-200">
-            Get real-time insights to make informed business decisions:
+            Actionable financial insights to grow your business:
           </p>
           <ul className="list-disc ml-5 space-y-2 text-neutral-700 dark:text-neutral-300">
             <li>Custom Financial Dashboards</li>
@@ -67,14 +65,14 @@ export function CloudAccountingTimeline() {
       content: (
         <div>
           <p className="mb-4 text-sm text-neutral-800 dark:text-neutral-200">
-            Streamline workflows and reduce manual effort with automation:
+            Leverage technology to streamline accounting tasks:
           </p>
           <ul className="list-disc ml-5 space-y-2 text-neutral-700 dark:text-neutral-300">
-            <li>Automated Invoice Generation & Reminders</li>
+            <li>Automated Invoicing & Payment Reminders</li>
             <li>Bank Feed Integration & Auto-Categorization</li>
             <li>Integration with Payroll, CRM, and E-commerce Platforms</li>
-            <li>AI-based Expense Categorization & Fraud Detection</li>
-            <li>Mobile Access & Cloud Storage for Secure Data</li>
+            <li>AI-driven Expense Categorization & Fraud Detection</li>
+            <li>Cloud-based Access & Secure Data Storage</li>
           </ul>
         </div>
       ),
@@ -84,20 +82,88 @@ export function CloudAccountingTimeline() {
       content: (
         <div>
           <p className="mb-4 text-sm text-neutral-800 dark:text-neutral-200">
-            Beyond numbers — guiding your business growth and financial
-            strategy:
+            Beyond compliance — strategic financial advice for U.S. businesses:
           </p>
           <ul className="list-disc ml-5 space-y-2 text-neutral-700 dark:text-neutral-300">
-            <li>Financial Planning & Strategy</li>
-            <li>Business Performance Analysis</li>
-            <li>Startup & SME Advisory</li>
-            <li>Cloud Accounting Implementation Support</li>
-            <li>Training & Support for Teams</li>
+            <li>Business & Financial Planning</li>
+            <li>Growth & Performance Analysis</li>
+            <li>Startup & Small Business Advisory</li>
+            <li>Technology & Cloud Accounting Implementation</li>
+            <li>Training & Support for In-house Teams</li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      title: "Sales Tax",
+      content: (
+        <div>
+          <p className="mb-4 text-sm text-neutral-800 dark:text-neutral-200">
+            Manage multi-state and local sales tax compliance with confidence:
+          </p>
+          <ul className="list-disc ml-5 space-y-2 text-neutral-700 dark:text-neutral-300">
+            <li>Sales tax calculation & automated filing</li>
+            <li>Nexus tracking for multi-state compliance</li>
+            <li>Sales tax reports for e-commerce & retail</li>
+            <li>Exemption certificate management</li>
+            <li>Sales tax audit support</li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      title: "Income Tax",
+      content: (
+        <div>
+          <p className="mb-4 text-sm text-neutral-800 dark:text-neutral-200">
+            Full-service federal and state income tax solutions:
+          </p>
+          <ul className="list-disc ml-5 space-y-2 text-neutral-700 dark:text-neutral-300">
+            <li>Preparation & filing of federal income tax returns</li>
+            <li>State-specific corporate & individual income tax compliance</li>
+            <li>Quarterly estimated tax planning</li>
+            <li>Maximizing allowable deductions & credits</li>
+            <li>IRS audit support & representation</li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      title: "Payroll & Employment Taxes",
+      content: (
+        <div>
+          <p className="mb-4 text-sm text-neutral-800 dark:text-neutral-200">
+            Stay compliant with payroll tax laws and employment reporting:
+          </p>
+          <ul className="list-disc ml-5 space-y-2 text-neutral-700 dark:text-neutral-300">
+            <li>Payroll processing & tax withholding</li>
+            <li>FICA, FUTA, and state unemployment tax compliance</li>
+            <li>Quarterly & annual payroll tax returns</li>
+            <li>W-2 & 1099 preparation & filing</li>
+            <li>Multi-state employment tax compliance</li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      title: "Other Business-Related Taxes",
+      content: (
+        <div>
+          <p className="mb-4 text-sm text-neutral-800 dark:text-neutral-200">
+            Covering additional taxes common to U.S. businesses:
+          </p>
+          <ul className="list-disc ml-5 space-y-2 text-neutral-700 dark:text-neutral-300">
+            <li>Franchise Taxes (state-specific)</li>
+            <li>Excise Taxes (federal & industry-based)</li>
+            <li>Gross Receipts Taxes</li>
+            <li>Occupational & industry-specific compliance</li>
+            <li>Ongoing tax planning & advisory</li>
           </ul>
         </div>
       ),
     },
   ];
+
 
   return (
     <div className="relative w-full overflow-clip py-15">
