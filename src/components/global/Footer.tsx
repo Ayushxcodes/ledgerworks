@@ -42,7 +42,7 @@ const FooterLedgerWorks = () => {
           <div className="py-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 gap-x-8 gap-y-10 px-6 xl:px-0">
             {/* Logo + Mission */}
             <div className="col-span-full xl:col-span-2">
-              <h2 className="text-2xl font-bold">Ledger Works</h2>
+              <h2 className="text-2xl font-bold">LedgerWorks Accounting Inc.</h2>
               <p className="mt-4 text-muted-foreground">
                 Empowering businesses with accurate books, timely compliance,
                 and clear financial insights for confident growth.
@@ -77,7 +77,7 @@ const FooterLedgerWorks = () => {
                   placeholder="Enter your email"
                   className="grow max-w-64"
                 />
-                <Button>Subscribe</Button>
+                <Button>Contact us</Button>
               </form>
               <p className="text-xs text-muted-foreground mt-2">
                 Get the latest accounting insights, compliance updates, and
@@ -89,7 +89,7 @@ const FooterLedgerWorks = () => {
           <div className="py-8 flex flex-col-reverse sm:flex-row items-center justify-between gap-x-2 gap-y-5 px-6 xl:px-0">
             {/* Copyright */}
             <span className="text-muted-foreground">
-              &copy; {new Date().getFullYear()} Ledger Works. All rights
+              &copy; {new Date().getFullYear()} LedgerWorks Inc.@All rights
               reserved.
             </span>
 
