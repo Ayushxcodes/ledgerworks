@@ -3,7 +3,7 @@ import React from 'react'
 
 const Homepage = () => {
   return (
-    <div className='py-20'>
+    <div className='py-10'>
       <Home />
     </div>
   )
