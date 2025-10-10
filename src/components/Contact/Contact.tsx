@@ -32,11 +32,12 @@ const Contact02Page = () => (
             </p>
             <Link
               className="font-medium text-primary"
-              href="mailto:akashmoradiya3444@gmail.com"
+              href="mailto:support@ledgerworksinc.co.in"
             >
-              akashmoradiya3444@gmail.com
+              support@ledgerworksinc.co.in
             </Link>
           </div>
+
           <div>
             <div className="h-12 w-12 flex items-center justify-center bg-primary/5 dark:bg-primary/10 text-primary rounded-full">
               <MessageCircle />
@@ -49,6 +50,7 @@ const Contact02Page = () => (
               Start new chat
             </Link>
           </div>
+
           <div>
             <div className="h-12 w-12 flex items-center justify-center bg-primary/5 dark:bg-primary/10 text-primary rounded-full">
               <MapPinIcon />
@@ -62,9 +64,10 @@ const Contact02Page = () => (
               href="https://map.google.com"
               target="_blank"
             >
-              100 Smith Street Collingwood <br /> VIC 3066 AU
+              3 Farrell Way, Hicksville, NY, 11801, USA
             </Link>
           </div>
+
           <div>
             <div className="h-12 w-12 flex items-center justify-center bg-primary/5 dark:bg-primary/10 text-primary rounded-full">
               <PhoneIcon />
@@ -73,11 +76,8 @@ const Contact02Page = () => (
             <p className="my-2.5 text-muted-foreground">
               Mon-Fri from 8am to 5pm.
             </p>
-            <Link
-              className="font-medium text-primary"
-              href="tel:akashmoradiya3444@gmail.com"
-            >
-              +1 (555) 000-0000
+            <Link className="font-medium text-primary" href="tel:+19373676512">
+              +1 9373676512
             </Link>
           </div>
         </div>

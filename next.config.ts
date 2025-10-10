@@ -1,10 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true, // optional but recommended
+  reactStrictMode: true,
   images: {
-    domains: ["images.pexels.com"], // add any external image hosts here
+    domains: ["images.pexels.com"],
+    unoptimized: true, // 👈 disable Image Optimization
   },
+  output: "export", // keep for static export
 };
 
 export default nextConfig;

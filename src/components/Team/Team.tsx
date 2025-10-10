@@ -14,23 +14,23 @@ const teamMembers = [
   {
     name: "Shourya Yadav (CA)",
     title: "Chartered Accountant",
-    bio: "Chartered Accountant with a decade of international experience across Big 4 firms.",
+    bio: "A highly accomplished Chartered Accountant with over a decade of international experience, Shourya bridges global financial standards with strategic business insights.",
     details: [
       {
         heading: "Experience",
-        text: "Worked with Deloitte USA & Ireland, PwC London, and KPMG India, supporting U.S. clients from startups to SEC-listed corporations.",
+        text: "Shourya has worked across Deloitte USA & Ireland, PwC London, and KPMG India, delivering high-impact solutions to startups, SMEs, and SEC-listed corporations, ensuring compliance and optimizing financial performance.",
       },
       {
         heading: "Leadership",
-        text: "Served as Finance Lead at a U.S. startup, driving value-added services and strengthening her passion for supporting small businesses.",
+        text: "Served as Finance Lead at a U.S. startup, spearheading cross-functional teams and implementing scalable processes that improved reporting accuracy and operational efficiency.",
       },
       {
         heading: "Expertise",
-        text: "Delivers accurate financials, timely tax compliance, and actionable insights, enabling entrepreneurs to focus on growth.",
+        text: "Specializes in audit, taxation, and financial advisory for international businesses, providing actionable insights to support sustainable growth and informed decision-making.",
       },
       {
         heading: "Approach",
-        text: "Blends Big 4 expertise with a hands-on, client-focused approach, earning trust as both an advisor and business partner.",
+        text: "Combines technical proficiency with a client-focused mindset, translating complex financial concepts into practical strategies that empower business leaders.",
       },
     ],
     imageUrl: "/image1.jpg",
@@ -38,23 +38,23 @@ const teamMembers = [
   {
     name: "Nishant Khemani",
     title: "Chartered Accountant",
-    bio: "Experienced in Business Restructuring, Tax Advisory, and U.S. Taxation matters.",
+    bio: "Nishant brings deep expertise in cross-border taxation and corporate restructuring, helping clients navigate complex U.S. tax regulations with confidence.",
     details: [
       {
         heading: "Experience",
-        text: "Nishant has previously worked at KPMG's International Taxation and Regulatory division, where he supported multinational clients in restructuring and cross-border taxation projects.",
+        text: "Formerly at KPMG’s International Taxation division, Nishant advised multinational corporations on restructuring, compliance, and international tax optimization strategies.",
       },
       {
         heading: "Leadership",
-        text: "He has led advisory assignments involving U.S. tax compliance for corporations, ensuring clients met global tax obligations with accuracy and timeliness.",
+        text: "Led teams managing U.S. tax compliance projects for high-profile clients, ensuring timely filings and adherence to regulatory frameworks.",
       },
       {
         heading: "Expertise",
-        text: "Nishant specializes in US GAAP and provides strategic advisory on U.S. taxation matters, including compliance, reporting, and restructuring impacts.",
+        text: "Specializes in US GAAP, international tax treaties, and strategic tax advisory, enabling businesses to minimize risks while maximizing compliance and efficiency.",
       },
       {
         heading: "Approach",
-        text: "With a client-first approach, he combines technical expertise with practical solutions, helping businesses navigate complex U.S. tax regulations confidently.",
+        text: "Known for a client-first methodology, Nishant combines analytical precision with practical solutions to simplify complex tax challenges.",
       },
     ],
     imageUrl: "/nishant.png",
@@ -62,23 +62,23 @@ const teamMembers = [
   {
     name: "Pooja Bansal",
     title: "Chartered Accountant",
-    bio: "Specialist in India–U.S. tax matters and international taxation.",
+    bio: "Pooja is a specialist in India–U.S. tax matters, offering extensive international taxation expertise to optimize client outcomes across jurisdictions.",
     details: [
       {
         heading: "Experience",
-        text: "Pooja has extensive experience in international taxation, having advised clients across industries on complex India–U.S. tax structures.",
+        text: "Advised multinational clients on complex India–U.S. tax structures, transfer pricing, and corporate taxation, ensuring compliance and strategic advantage.",
       },
       {
         heading: "Leadership",
-        text: "She has guided multinational clients through tax advisory engagements, managing DTAA-related issues and supporting corporate tax strategy.",
+        text: "Managed cross-border tax advisory engagements, guiding clients through DTAA-related matters and corporate tax strategy implementation.",
       },
       {
         heading: "Expertise",
-        text: "Her specialization includes DTAA interpretation, GILTI implications, transfer pricing, and U.S. corporate and individual taxation.",
+        text: "Focuses on international tax law, DTAA interpretation, GILTI regulations, and U.S. corporate and individual taxation, providing precise and actionable insights.",
       },
       {
         heading: "Approach",
-        text: "Pooja combines analytical rigor with a solutions-oriented mindset, helping clients minimize risks while ensuring compliance across jurisdictions.",
+        text: "Blends analytical rigor with a solutions-oriented mindset, helping clients mitigate risks while achieving tax efficiency across multiple jurisdictions.",
       },
     ],
     imageUrl: "/pooja.png",
@@ -86,23 +86,23 @@ const teamMembers = [
   {
     name: "Aman Agarwal",
     title: "Chartered Accountant, MBA (Finance)",
-    bio: "Over 10 years of consulting experience in U.S. Tax laws.",
+    bio: "Aman brings over 10 years of consulting expertise in U.S. tax laws, combining strategic finance knowledge with hands-on advisory for high-net-worth individuals and corporations.",
     details: [
       {
         heading: "Experience",
-        text: "Aman has more than a decade of consulting experience, assisting U.S.-based corporations and individuals with their tax compliance and advisory needs.",
+        text: "Provided end-to-end U.S. tax solutions, including planning, compliance, and advisory, to corporations and individuals, ensuring accurate filings and optimal tax outcomes.",
       },
       {
         heading: "Leadership",
-        text: "He has led consulting teams delivering end-to-end U.S. tax solutions, including tax planning, IRS filings, and advisory for high-net-worth individuals.",
+        text: "Led teams delivering consulting services across diverse industries, mentoring junior staff and streamlining processes for consistent excellence in client delivery.",
       },
       {
         heading: "Expertise",
-        text: "Aman’s expertise lies in handling complex U.S. tax matters, IRS compliance, and filing of federal and state returns with precision.",
+        text: "Specializes in complex U.S. tax matters, IRS compliance, federal and state filings, and financial advisory for business growth and regulatory adherence.",
       },
       {
         heading: "Approach",
-        text: "By blending his CA background with an MBA in Finance, Aman delivers holistic solutions that combine regulatory compliance with business growth insights.",
+        text: "Integrates CA and MBA expertise to provide comprehensive financial strategies, emphasizing practical solutions that align with business objectives and compliance requirements.",
       },
     ],
     imageUrl: "/aman.png",
