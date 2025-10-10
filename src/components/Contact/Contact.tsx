@@ -64,7 +64,7 @@ const Contact02Page = () => (
               href="https://map.google.com"
               target="_blank"
             >
-              3 Farrell Way, Hicksville, NY, 11801, USA
+              United States (U.S)
             </Link>
           </div>
 
