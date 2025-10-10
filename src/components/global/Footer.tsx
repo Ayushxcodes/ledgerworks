@@ -8,27 +8,22 @@ const footerSections = [
   {
     title: "Services",
     links: [
-      { title: "Tax Strategy", href: "/services/tax-strategy" },
-      { title: "Cloud Accounting", href: "/services/cloud-accounting" },
-      { title: "Bookkeeping", href: "/services/bookkeeping" },
-      { title: "Compliance", href: "/services/compliance" },
+      { title: "Tax Strategy", href: "/tax" },
+      { title: "Cloud Accounting", href: "/cloud" },
     ],
   },
   {
     title: "Company",
     links: [
-      { title: "About Us", href: "/about" },
-      { title: "Careers", href: "/careers" },
+      { title: "About Us", href: "/team" },
       { title: "Contact", href: "/contact" },
-      { title: "Blog", href: "/blog" },
+      
     ],
   },
   {
     title: "Resources",
     links: [
-      { title: "Guides", href: "/resources/guides" },
-      { title: "Case Studies", href: "/resources/case-studies" },
-      { title: "FAQs", href: "/resources/faqs" },
+      { title: "FAQs", href: "/company" },
       { title: "Support", href: "/contact" },
     ],
   },
