@@ -12,103 +12,70 @@ import {
 
 const teamMembers = [
   {
-    name: "Shourya Yadav (CA)",
-    title: "Chartered Accountant",
-    bio: "A highly accomplished Chartered Accountant with over a decade of international experience, Shourya bridges global financial standards with strategic business insights.",
-    details: [
-      {
-        heading: "Experience",
-        text: "Shourya has worked across Deloitte USA & Ireland, PwC London, and KPMG India, delivering high-impact solutions to startups, SMEs, and SEC-listed corporations, ensuring compliance and optimizing financial performance.",
-      },
-      {
-        heading: "Leadership",
-        text: "Served as Finance Lead at a U.S. startup, spearheading cross-functional teams and implementing scalable processes that improved reporting accuracy and operational efficiency.",
-      },
-      {
-        heading: "Expertise",
-        text: "Specializes in audit, taxation, and financial advisory for international businesses, providing actionable insights to support sustainable growth and informed decision-making.",
-      },
-      {
-        heading: "Approach",
-        text: "Combines technical proficiency with a client-focused mindset, translating complex financial concepts into practical strategies that empower business leaders.",
-      },
-    ],
-    imageUrl: "/image1.jpg",
-  },
-  {
     name: "Nishant Khemani",
-    title: "Chartered Accountant",
-    bio: "Nishant brings deep expertise in cross-border taxation and corporate restructuring, helping clients navigate complex U.S. tax regulations with confidence.",
+    title: "Chartered Accountant, Enrolled Agent",
+    bio: "Nishant is a Qualified Chartered Accountant and Enrolled Agent with advanced certifications from Harvard Business School (Boston, USA) and the London School of Economics (UK). With over five years of experience at KPMG, he brings deep expertise in cross-border accounting, financial strategy, and technology-driven finance solutions.",
     details: [
       {
-        heading: "Experience",
-        text: "Formerly at KPMG’s International Taxation division, Nishant advised multinational corporations on restructuring, compliance, and international tax optimization strategies.",
+        heading: "Global Experience",
+        text: "Having worked extensively with multinational corporations and large global clients across Europe and the U.S., Nishant combines his accounting acumen with strong technical knowledge in automation, AI, and machine learning applications within finance.",
       },
       {
-        heading: "Leadership",
-        text: "Led teams managing U.S. tax compliance projects for high-profile clients, ensuring timely filings and adherence to regulatory frameworks.",
-      },
-      {
-        heading: "Expertise",
-        text: "Specializes in US GAAP, international tax treaties, and strategic tax advisory, enabling businesses to minimize risks while maximizing compliance and efficiency.",
-      },
-      {
-        heading: "Approach",
-        text: "Known for a client-first methodology, Nishant combines analytical precision with practical solutions to simplify complex tax challenges.",
+        heading: "Client Impact",
+        text: "At our firm, Nishant partners with clients worldwide — from startups to mid-sized enterprises — helping them implement innovative, tech-enabled financial processes.",
       },
     ],
     imageUrl: "/nishant.png",
   },
   {
-    name: "Pooja Bansal",
+    name: "Shourya Yadav (CA)",
     title: "Chartered Accountant",
-    bio: "Pooja is a specialist in India–U.S. tax matters, offering extensive international taxation expertise to optimize client outcomes across jurisdictions.",
+    bio: "Shourya is a seasoned finance professional and a certified Accountant with over a decade of experience across Deloitte (USA), PwC (London), and KPMG (India). She has worked extensively with U.S. clients ranging from emerging private companies to large SEC-listed corporations, providing expertise in financial reporting, compliance, and advisory services.",
     details: [
       {
-        heading: "Experience",
-        text: "Advised multinational clients on complex India–U.S. tax structures, transfer pricing, and corporate taxation, ensuring compliance and strategic advantage.",
-      },
-      {
-        heading: "Leadership",
-        text: "Managed cross-border tax advisory engagements, guiding clients through DTAA-related matters and corporate tax strategy implementation.",
-      },
-      {
-        heading: "Expertise",
-        text: "Focuses on international tax law, DTAA interpretation, GILTI regulations, and U.S. corporate and individual taxation, providing precise and actionable insights.",
+        heading: "Leadership Experience",
+        text: "She also served as Finance Lead for a U.S.-based startup, where she helped build scalable financial operations and drive growth.",
       },
       {
         heading: "Approach",
-        text: "Blends analytical rigor with a solutions-oriented mindset, helping clients mitigate risks while achieving tax efficiency across multiple jurisdictions.",
+        text: "Her experience across both global firms and startups fuels her passion for partnering with small businesses to strengthen their financial foundations and achieve sustainable success.",
       },
     ],
-    imageUrl: "/pooja.png",
+    imageUrl: "/image1.jpg",
   },
   {
     name: "Aman Agarwal",
     title: "Chartered Accountant, MBA (Finance)",
-    bio: "Aman brings over 10 years of consulting expertise in U.S. tax laws, combining strategic finance knowledge with hands-on advisory for high-net-worth individuals and corporations.",
+    bio: "Aman Aggarwal is a Chartered Public Accountant and finance professional with over a decade of experience advising businesses on complex financial and economic matters. With an MBA in Finance, he brings a strong command of accounting principles, regulatory frameworks, and strategic financial management.",
     details: [
       {
-        heading: "Experience",
-        text: "Provided end-to-end U.S. tax solutions, including planning, compliance, and advisory, to corporations and individuals, ensuring accurate filings and optimal tax outcomes.",
-      },
-      {
-        heading: "Leadership",
-        text: "Led teams delivering consulting services across diverse industries, mentoring junior staff and streamlining processes for consistent excellence in client delivery.",
-      },
-      {
         heading: "Expertise",
-        text: "Specializes in complex U.S. tax matters, IRS compliance, federal and state filings, and financial advisory for business growth and regulatory adherence.",
+        text: "Over the past 10+ years, Aman has guided clients across industries in navigating U.S. economic laws, compliance structures, and business consulting initiatives.",
       },
       {
-        heading: "Approach",
-        text: "Integrates CA and MBA expertise to provide comprehensive financial strategies, emphasizing practical solutions that align with business objectives and compliance requirements.",
+        heading: "Specialization",
+        text: "His expertise in cross-border accounting practices makes him a valuable resource for firms operating within U.S. financial environments.",
       },
     ],
     imageUrl: "/aman.png",
   },
+  {
+    name: "Pranjal Bansal",
+    title: "Fellow Chartered Accountant (FCA), Dip IFR, FAFD",
+    bio: "Pranjal Bansal is a seasoned finance and audit professional and a Fellow Chartered Accountant (FCA) with over 15 years of experience, including a distinguished tenure at Deloitte and other Big 4 firms. Holding a Diploma in International Financial Reporting (Dip IFR) and a certification in Forensic Accounting and Fraud Detection (FAFD), he brings deep expertise in financial reporting across Indian GAAP, US GAAP, and IFRS.",
+    details: [
+      {
+        heading: "Global Expertise",
+        text: "Pranjal has worked extensively with US-based clients, providing advisory across accounting, tax registrations, IRS compliance, and cross-border financial strategy.",
+      },
+      {
+        heading: "Client Partnership",
+        text: "His cross-border expertise makes him a trusted partner for businesses operating across Indo-US jurisdictions.",
+      },
+    ],
+    imageUrl: "/pranjal.jpeg",
+  },
 ];
-
 
 
 
@@ -137,7 +104,7 @@ const Team04Page = () => {
       </div>
 
       {/* Team Grid */}
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-10 gap-y-12">
+      <div className="w-full flex flex-wrap justify-center gap-x-10 gap-y-12">
         {teamMembers.map((member) => (
           <Dialog key={member.name}>
             <DialogTrigger asChild>

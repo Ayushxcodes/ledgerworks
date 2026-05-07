@@ -57,15 +57,13 @@ export function Features() {
             priority // preloads the image
           />
         </div>
+        <h3 className="text-xl lg:text-4xl font-semibold text-center mb-2">Smarter Accounting Starts Here</h3>
         <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
           Simplifying Finances, Empowering Growth
         </h4>
 
         <p className="text-sm lg:text-base max-w-2xl my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
-          At <strong>LedgerWorks</strong>, our Chartered Accountants provide
-          tailored bookkeeping and tax solutions for businesses across the US.
-          From accurate records to smart tax strategies, we help you stay
-          compliant and focus on what matters most — growing your business.
+          At LedgerWorks Accounting, we’re reimagining what accounting can be by combining Artificial Intelligence (AI) with expert human insight to deliver a new kind of financial clarity — fast, accurate, and built around your business goals. Our mission is simple: to make accounting smarter, tax planning more strategic, and bookkeeping effortless. Our Chartered Accountants provide tailored bookkeeping and tax solutions for businesses across the US, helping you stay compliant, implement smart tax strategies, and focus on what matters most — growing your business.
         </p>
       </div>
 
