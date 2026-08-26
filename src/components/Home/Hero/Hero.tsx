@@ -10,13 +10,12 @@ const Globe = dynamic(() => import("./Globe").then((mod) => mod.Globe), {
     <div className="w-full h-full min-h-[300px] rounded-2xl bg-neutral-100 dark:bg-neutral-900 animate-pulse" />
   ),
 });
-import { LayoutTextFlip } from "@/components/ui/layout-text-flip";
 import { motion } from "motion/react";
 
 const Hero04 = () => {
   return (
-    <div className="min-h-screen flex justify-center overflow-hidden bg-background pt-0">
-      <div className="max-w-(--breakpoint-xl) w-full mx-auto grid lg:grid-cols-2 gap-12 px-4 sm:px-6 lg:px-12 py-0 items-start">
+    <div className="min-h-screen flex justify-center overflow-hidden bg-background pt-24 sm:pt-28 md:pt-32 lg:pt-24 pb-12">
+      <div className="max-w-(--breakpoint-xl) w-full mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 px-4 sm:px-6 lg:px-12 py-0 items-center">
         {/* Left Section */}
         <div className="my-auto font-sans text-center lg:text-left">
           {/* Animated LedgerWorks Title */}
@@ -57,9 +56,9 @@ const Hero04 = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+          <div className="mt-8 md:mt-12 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full">
             {/* Primary CTA */}
-            <Link href="/contact">
+            <Link href="/contact" className="w-full sm:w-auto">
               <button className="relative inline-flex w-full sm:w-auto h-12 overflow-hidden rounded-full p-[4px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                 <span className="inline-flex h-full w-full items-center justify-center rounded-full bg-slate-950 px-6 text-base font-medium text-white backdrop-blur-3xl">
@@ -69,7 +68,7 @@ const Hero04 = () => {
             </Link>
 
             {/* Secondary CTA */}
-            <Link href="/contact">
+            <Link href="/contact" className="w-full sm:w-auto">
               <button className="relative inline-flex w-full sm:w-auto h-12 overflow-hidden rounded-full p-[2px] focus:outline-none">
                 <span className="absolute inset-[-1000%] animate-[spin_6s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#1e293b_0%,#475569_50%,#1e293b_100%)] opacity-70" />
                 <span className="inline-flex h-full w-full items-center justify-center rounded-full bg-background px-6 text-base font-medium text-foreground backdrop-blur-sm">
@@ -96,15 +95,15 @@ export default Hero04;
 export function LayoutTextFlipDemo() {
   return (
     <motion.div
-      initial={{ opacity: 0, y: -15 }}
+      initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7, ease: "easeOut" }}
-      className="text-xl sm:text-2xl md:text-3xl font-semibold text-primary"
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight text-neutral-800 dark:text-neutral-200 flex items-center flex-wrap gap-2.5"
     >
-      <LayoutTextFlip
-        text="Welcome to "
-        words={["Ledgerworks", "Ledgerworks", "Ledgerworks", "Ledgerworks"]}
-      />
+      <span>Welcome to</span>
+      <span className="relative inline-flex items-center px-3.5 py-1 rounded-xl bg-neutral-900 text-white dark:bg-white dark:text-neutral-950 font-extrabold tracking-tight shadow-md transition-transform hover:scale-[1.03]">
+        <span className="animate-pulse">LedgerWorks</span>
+      </span>
     </motion.div>
   );
 }

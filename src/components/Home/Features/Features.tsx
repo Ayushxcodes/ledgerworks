@@ -40,26 +40,39 @@ export function Features() {
     },
   ];
   return (
-    <div className="relative z-20 py-10 lg:py-2 max-w-7xl mx-auto">
-      <div className="px-8">
-        <div className="flex justify-center mb-6 lg:mb-8">
+    <div className="relative z-20 py-12 lg:py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center max-w-3xl mx-auto space-y-6">
+        {/* Logo */}
+        <div className="flex justify-center mb-2">
           <Image
-            src="/fulllogo.png" // replace with your logo path
+            src="/fulllogo.png"
             alt="LedgerWorks Logo"
-            width={400} // increased width
-            height={110} // increased height
-            className="h-auto w-[250px] sm:w-[300px] md:w-[350px] lg:w-[400px]"
-            priority // preloads the image
+            width={400}
+            height={110}
+            className="h-auto w-[260px] sm:w-[320px] md:w-[380px] lg:w-[440px] object-contain"
+            priority
           />
         </div>
-        <h3 className="text-xl lg:text-4xl font-semibold text-center mb-2">Smarter Accounting Starts Here</h3>
-        <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
-          Simplifying Finances, Empowering Growth
-        </h4>
 
-        <p className="text-sm lg:text-base max-w-2xl my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
-          At LedgerWorks Accounting, we’re reimagining what accounting can be by combining Artificial Intelligence (AI) with expert human insight to deliver a new kind of financial clarity — fast, accurate, and built around your business goals. Our mission is simple: to make accounting smarter, tax planning more strategic, and bookkeeping effortless. Our Chartered Accountants provide tailored bookkeeping and tax solutions for businesses across the US, helping you stay compliant, implement smart tax strategies, and focus on what matters most — growing your business.
-        </p>
+        {/* Section Subtitle */}
+        <div className="text-xs sm:text-sm font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400">
+          Smarter Accounting Starts Here
+        </div>
+
+        {/* Main Title */}
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-neutral-900 dark:text-white leading-tight">
+          Simplifying Finances, Empowering Growth
+        </h2>
+
+        {/* Full Text - Decluttered into 2 spacious paragraphs */}
+        <div className="space-y-4 pt-2 text-base sm:text-lg text-neutral-600 dark:text-neutral-300 leading-relaxed font-normal">
+          <p>
+            At <strong className="text-neutral-900 dark:text-white font-semibold">LedgerWorks Accounting</strong>, we&apos;re reimagining what accounting can be by combining Artificial Intelligence (AI) with expert human insight to deliver a new kind of financial clarity — fast, accurate, and built around your business goals.
+          </p>
+          <p>
+            Our mission is simple: to make accounting smarter, tax planning more strategic, and bookkeeping effortless. Our Chartered Accountants provide tailored bookkeeping and tax solutions for businesses across the US, helping you stay compliant, implement smart tax strategies, and focus on what matters most — growing your business.
+          </p>
+        </div>
       </div>
 
       <div className="relative ">

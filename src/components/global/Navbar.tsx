@@ -270,7 +270,7 @@ export function NavbarMain() {
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-2 p-4 rounded-2xl bg-white/95 dark:bg-neutral-900/95 backdrop-blur-2xl border border-neutral-200 dark:border-neutral-800 shadow-2xl animate-in fade-in slide-in-from-top-3 duration-200 pointer-events-auto">
+          <div className="md:hidden mt-2 p-4 rounded-2xl bg-white/95 dark:bg-neutral-900/95 backdrop-blur-2xl border border-neutral-200 dark:border-neutral-800 shadow-2xl animate-in fade-in slide-in-from-top-3 duration-200 pointer-events-auto max-h-[85vh] overflow-y-auto">
             <div className="flex flex-col space-y-1">
               <Link
                 href="/"
