@@ -29,38 +29,7 @@ const teamMembers = [
     ],
     imageUrl: "/nishant.png",
   },
-  {
-    name: "Shourya Yadav (CA)",
-    title: "Chartered Accountant",
-    bio: "Shourya is a seasoned finance professional and a certified Accountant with over a decade of experience across Deloitte (USA), PwC (London), and KPMG (India). She has worked extensively with U.S. clients ranging from emerging private companies to large SEC-listed corporations, providing expertise in financial reporting, compliance, and advisory services.",
-    details: [
-      {
-        heading: "Leadership Experience",
-        text: "She also served as Finance Lead for a U.S.-based startup, where she helped build scalable financial operations and drive growth.",
-      },
-      {
-        heading: "Approach",
-        text: "Her experience across both global firms and startups fuels her passion for partnering with small businesses to strengthen their financial foundations and achieve sustainable success.",
-      },
-    ],
-    imageUrl: "/image1.jpg",
-  },
-  {
-    name: "Aman Agarwal",
-    title: "Chartered Accountant, MBA (Finance)",
-    bio: "Aman Aggarwal is a Chartered Public Accountant and finance professional with over a decade of experience advising businesses on complex financial and economic matters. With an MBA in Finance, he brings a strong command of accounting principles, regulatory frameworks, and strategic financial management.",
-    details: [
-      {
-        heading: "Expertise",
-        text: "Over the past 10+ years, Aman has guided clients across industries in navigating U.S. economic laws, compliance structures, and business consulting initiatives.",
-      },
-      {
-        heading: "Specialization",
-        text: "His expertise in cross-border accounting practices makes him a valuable resource for firms operating within U.S. financial environments.",
-      },
-    ],
-    imageUrl: "/aman.png",
-  },
+  
   {
     name: "Pranjal Bansal",
     title: "Fellow Chartered Accountant (FCA), Dip IFR, FAFD",
