@@ -62,11 +62,11 @@ const Contact02Page = () => (
               Come say hello at our office HQ.
             </p>
             <Link
-              className="font-medium text-primary"
-              href="https://map.google.com"
+              className="font-medium text-primary block"
+              href="https://maps.google.com/?q=3+Farrell+Way,+Hicksville,+NY+11801"
               target="_blank"
             >
-              United States (U.S)
+              3 Farrell Way, Hicksville, NY 11801
             </Link>
           </div>
 
