@@ -33,10 +33,10 @@ const Contact02Page = () => (
               Our friendly team is here to help.
             </p>
             <Link
-              className="font-medium text-primary"
-              href="mailto:support@ledgerworksinc.co.in"
+              className="font-medium text-primary break-all"
+              href="mailto:nishant@saturnconsultinggroup.com"
             >
-              support@ledgerworksinc.co.in
+              nishant@saturnconsultinggroup.com
             </Link>
           </div>
 

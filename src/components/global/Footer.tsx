@@ -96,7 +96,7 @@ const FooterLedgerWorks = () => {
               <Link href="https://linkedin.com" target="_blank">
                 <LinkedinIcon className="h-5 w-5" />
               </Link>
-              <Link href="mailto:hello@ledgerworks.com" target="_blank">
+              <Link href="mailto:nishant@saturnconsultinggroup.com" target="_blank">
                 <MailIcon className="h-5 w-5" />
               </Link>
               <Link href="https://github.com" target="_blank">

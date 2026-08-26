@@ -15,7 +15,7 @@ import {
 const teamMembers = [
   {
     name: "Nishant Khemani",
-    title: "Chartered Accountant, Enrolled Agent",
+    title: "Managing Partner | Chartered Accountant, Enrolled Agent",
     bio: "Nishant is a Qualified Chartered Accountant and Enrolled Agent with advanced certifications from Harvard Business School (Boston, USA) and the London School of Economics (UK). With over five years of experience at KPMG, he brings deep expertise in cross-border accounting, financial strategy, and technology-driven finance solutions.",
     details: [
       {
@@ -103,7 +103,16 @@ const Team04Page = () => {
                   height={120}
                 />
                 <h3 className="mt-5 text-lg font-semibold">{member.name}</h3>
-                <p className="text-muted-foreground text-sm">{member.title}</p>
+                <p className="text-muted-foreground text-sm">
+                  {member.title.includes("Managing Partner") ? (
+                    <>
+                      <span className="font-bold text-foreground">Managing Partner</span>
+                      {member.title.replace("Managing Partner", "")}
+                    </>
+                  ) : (
+                    member.title
+                  )}
+                </p>
                 <p className="mt-2 mb-6 text-pretty">{member.bio}</p>
                 <div className="mt-auto flex items-center gap-4">
                   <Link href="https://linkedin.com" target="_blank">
@@ -131,7 +140,16 @@ const Team04Page = () => {
                     <DialogTitle className="text-xl font-semibold">
                       {member.name}
                     </DialogTitle>
-                    <p className="text-muted-foreground">{member.title}</p>
+                    <p className="text-muted-foreground text-sm">
+                      {member.title.includes("Managing Partner") ? (
+                        <>
+                          <span className="font-bold text-foreground">Managing Partner</span>
+                          {member.title.replace("Managing Partner", "")}
+                        </>
+                      ) : (
+                        member.title
+                      )}
+                    </p>
                   </div>
                 </div>
               </DialogHeader>
