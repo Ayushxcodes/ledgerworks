@@ -29,7 +29,22 @@ const teamMembers = [
     ],
     imageUrl: "/nishant.png",
   },
-  
+  {
+    name: "Wayne Schob (CPA)",
+    title: "Senior CPA Consultant",
+    bio: "For over 25 years, Wayne Schob, CPA, has helped individuals and businesses navigate tax, bookkeeping, and financial strategy with clarity and confidence.",
+    details: [
+      {
+        heading: "Consultant CPA",
+        text: "Wayne brings over 25 years of hands-on experience helping individuals and businesses navigate complex U.S. tax codes, bookkeeping systems, and long-term financial strategy.",
+      },
+      {
+        heading: "Strategic Guidance",
+        text: "His extensive background empowers clients with strategic tax planning, regulatory compliance, and confident financial decision-making.",
+      },
+    ],
+    imageUrl: "/wayne.jpeg",
+  },
   {
     name: "Pranjal Bansal",
     title: "Fellow Chartered Accountant (FCA), Dip IFR, FAFD",
