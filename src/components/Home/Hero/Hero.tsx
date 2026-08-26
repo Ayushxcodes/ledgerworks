@@ -2,7 +2,14 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowUpRight, CirclePlay } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import { Globe } from "./Globe";
+import dynamic from "next/dynamic";
+
+const Globe = dynamic(() => import("./Globe").then((mod) => mod.Globe), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-full min-h-[300px] rounded-2xl bg-neutral-100 dark:bg-neutral-900 animate-pulse" />
+  ),
+});
 import { LayoutTextFlip } from "@/components/ui/layout-text-flip";
 import { motion } from "motion/react";
 

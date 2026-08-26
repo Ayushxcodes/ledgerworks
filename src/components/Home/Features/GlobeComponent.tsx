@@ -7,62 +7,67 @@ export const Globe = ({ className }: { className?: string }) => {
 
   useEffect(() => {
     let phi = 0;
+    let width = 0;
+
+    const onResize = () => {
+      if (canvasRef.current) {
+        width = canvasRef.current.offsetWidth;
+      }
+    };
+
+    window.addEventListener("resize", onResize);
+    onResize();
 
     if (!canvasRef.current) return;
 
-    // Dynamically match canvas size to parent container
-    const resize = () => {
-      if (!canvasRef.current) return;
-      const { offsetWidth } = canvasRef.current.parentElement || {
-        offsetWidth: 400,
-      };
-      const size = Math.min(offsetWidth, 600); // cap at 600px
-      const globe = createGlobe(canvasRef.current, {
-        devicePixelRatio: 2,
-        width: size * 2,
-        height: size * 2,
-        phi: 0,
-        theta: 0,
-        dark: 1,
-        diffuse: 1.2,
-        mapSamples: 16000,
-        mapBrightness: 6,
-        baseColor: [0.3, 0.3, 0.3],
-        markerColor: [0.1, 0.8, 1],
-        glowColor: [1, 1, 1],
-        markers: [
-          { location: [37.7595, -122.4367], size: 0.03 },
-          { location: [40.7128, -74.006], size: 0.1 },
-        ],
-        onRender: (state) => {
-          state.phi = phi;
-          phi += 0.01;
-        },
-      });
+    const currentWidth = width || 350;
 
-      return globe;
-    };
-
-    let globe = resize();
-
-    // Handle resize events
-    const handleResize = () => {
-      if (globe) globe.destroy();
-      globe = resize();
-    };
-
-    window.addEventListener("resize", handleResize);
+    const globe = createGlobe(canvasRef.current, {
+      devicePixelRatio: 2,
+      width: currentWidth * 2,
+      height: currentWidth * 2,
+      phi: 0,
+      theta: 0,
+      dark: 1,
+      diffuse: 1.2,
+      mapSamples: 8000,
+      mapBrightness: 6,
+      baseColor: [0.3, 0.3, 0.3],
+      markerColor: [0.1, 0.8, 1],
+      glowColor: [1, 1, 1],
+      markers: [
+        { location: [37.7595, -122.4367], size: 0.03 },
+        { location: [40.7128, -74.006], size: 0.1 },
+      ],
+      onRender: (state) => {
+        state.phi = phi;
+        phi += 0.005;
+        if (width) {
+          state.width = width * 2;
+          state.height = width * 2;
+        }
+      },
+    });
 
     return () => {
-      window.removeEventListener("resize", handleResize);
-      if (globe) globe.destroy();
+      globe.destroy();
+      window.removeEventListener("resize", onResize);
     };
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      className={`w-full h-auto max-w-[600px] aspect-square ${className}`}
-    />
+    <div className="w-full flex items-center justify-center relative">
+      <canvas
+        ref={canvasRef}
+        style={{
+          width: "100%",
+          height: "100%",
+          maxWidth: "350px",
+          maxHeight: "350px",
+          aspectRatio: "1 / 1",
+        }}
+        className={`mx-auto block ${className || ""}`}
+      />
+    </div>
   );
 };

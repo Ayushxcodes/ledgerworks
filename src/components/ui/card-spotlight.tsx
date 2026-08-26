@@ -6,7 +6,12 @@ import React, {
   useState,
   TouchEvent,
 } from "react";
-import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
+import dynamic from "next/dynamic";
+
+const CanvasRevealEffect = dynamic(
+  () => import("@/components/ui/canvas-reveal-effect").then((mod) => mod.CanvasRevealEffect),
+  { ssr: false }
+);
 import { cn } from "@/lib/utils";
 
 export const CardSpotlight = ({

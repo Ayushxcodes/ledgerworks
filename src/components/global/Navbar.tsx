@@ -1,12 +1,13 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { HoveredLink, Menu, MenuItem } from "../ui/navbar-menu";
 import { cn } from "@/lib/utils";
 
 export function NavbarMain() {
   return (
-    <div className="relative w-full flex items-center justify-center">
+    <div className="relative w-full flex items-center justify-center pt-4">
       <Navbar />
     </div>
   );
@@ -17,14 +18,13 @@ function Navbar({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        // Stick to the top without extra offset
-        "fixed top-0 inset-x-0 max-w-2xl mx-auto z-50",
+        "fixed top-4 inset-x-0 max-w-2xl mx-auto z-50 px-4 sm:px-0",
         className
       )}
     >
       <Menu setActive={setActive}>
-        {/* Logo just before Home */}
-        <div className="flex items-center px-2">
+        {/* Brand Logo */}
+        <Link href="/" className="flex items-center px-2 mr-2">
           <Image
             src="/logo.png"
             alt="LedgerWorks Logo"
@@ -32,35 +32,42 @@ function Navbar({ className }: { className?: string }) {
             height={32}
             className="object-contain"
           />
-        </div>
+        </Link>
 
-        <MenuItem setActive={setActive} active={active} item="Home">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/">HomePage</HoveredLink>
-            <HoveredLink href="/company">Company</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
-          </div>
-        </MenuItem>
+        {/* Home Link */}
+        <MenuItem setActive={setActive} active={active} item="Home" href="/" />
 
-        <MenuItem setActive={setActive} active={active} item="About">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/team">Team</HoveredLink>
-          </div>
-        </MenuItem>
-
+        {/* Services Dropdown */}
         <MenuItem setActive={setActive} active={active} item="Services">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/cloud">Cloud accounting</HoveredLink>
-            <HoveredLink href="/tax">Tax strategy</HoveredLink>
+          <div className="flex flex-col space-y-3 text-sm p-1">
+            <HoveredLink href="/cloud">Cloud Accounting</HoveredLink>
+            <HoveredLink href="/tax">Tax Strategy</HoveredLink>
           </div>
         </MenuItem>
 
-        <MenuItem setActive={setActive} active={active} item="Details">
-          <div className="flex flex-col space-y-4 text-sm">
-            <HoveredLink href="/contact">Contact</HoveredLink>
-            <HoveredLink href="/team">Team</HoveredLink>
+        {/* Solutions Direct Link */}
+        <MenuItem
+          setActive={setActive}
+          active={active}
+          item="Solutions"
+          href="/solutions"
+        />
+
+        {/* Company Dropdown */}
+        <MenuItem setActive={setActive} active={active} item="Company">
+          <div className="flex flex-col space-y-3 text-sm p-1">
+            <HoveredLink href="/company">About & FAQs</HoveredLink>
+            <HoveredLink href="/team">Leadership & Team</HoveredLink>
           </div>
         </MenuItem>
+
+        {/* Contact Direct Link */}
+        <MenuItem
+          setActive={setActive}
+          active={active}
+          item="Contact"
+          href="/contact"
+        />
       </Menu>
     </div>
   );

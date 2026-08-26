@@ -1,5 +1,7 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-import { DribbbleIcon, TwitchIcon, TwitterIcon } from "lucide-react";
+import { LinkedinIcon, MailIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -120,14 +122,11 @@ const Team04Page = () => {
                 <p className="text-muted-foreground text-sm">{member.title}</p>
                 <p className="mt-2 mb-6 text-pretty">{member.bio}</p>
                 <div className="mt-auto flex items-center gap-4">
-                  <Link href="#" target="_blank">
-                    <TwitterIcon className="stroke-muted-foreground h-5 w-5" />
+                  <Link href="https://linkedin.com" target="_blank">
+                    <LinkedinIcon className="stroke-muted-foreground hover:stroke-foreground h-5 w-5 transition-colors" />
                   </Link>
-                  <Link href="#" target="_blank">
-                    <DribbbleIcon className="stroke-muted-foreground h-5 w-5" />
-                  </Link>
-                  <Link href="#" target="_blank">
-                    <TwitchIcon className="stroke-muted-foreground h-5 w-5" />
+                  <Link href="/contact">
+                    <MailIcon className="stroke-muted-foreground hover:stroke-foreground h-5 w-5 transition-colors" />
                   </Link>
                 </div>
               </div>
@@ -169,14 +168,11 @@ const Team04Page = () => {
 
               {/* Social Links */}
               <div className="mt-6 flex gap-3">
-                <Link href="#" target="_blank">
-                  <TwitterIcon className="stroke-muted-foreground h-5 w-5" />
+                <Link href="https://linkedin.com" target="_blank">
+                  <LinkedinIcon className="stroke-muted-foreground hover:stroke-foreground h-5 w-5 transition-colors" />
                 </Link>
-                <Link href="#" target="_blank">
-                  <DribbbleIcon className="stroke-muted-foreground h-5 w-5" />
-                </Link>
-                <Link href="#" target="_blank">
-                  <TwitchIcon className="stroke-muted-foreground h-5 w-5" />
+                <Link href="/contact">
+                  <MailIcon className="stroke-muted-foreground hover:stroke-foreground h-5 w-5 transition-colors" />
                 </Link>
               </div>
             </DialogContent>

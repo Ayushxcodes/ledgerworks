@@ -1,16 +1,11 @@
 'use client'
-import React from "react";
+import React, { useState } from "react";
 import { cn } from "@/lib/utils";
-import createGlobe from "cobe";
-import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
-import { IconBrandYoutubeFilled } from "@tabler/icons-react";
 import { Cover } from "@/components/ui/cover";
 import { PinContainer } from "@/components/ui/3d-pin";
-import { SparklesCore } from "@/components/ui/sparkles";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
 import Image from "next/image";
-import { useState } from "react";
 
 export function Features() {
   const features = [
@@ -155,76 +150,23 @@ export const SkeletonTwo = () => {
 
 export const SkeletonFour = () => {
   return (
-    <div className="h-[300px] md:h-[500px] flex flex-col items-center relative bg-transparent dark:bg-transparent mt-10">
-      <Globe className="absolute right-0 left-0 bottom-0 mx-auto" />
+    <div className="h-[280px] sm:h-[320px] md:h-[360px] flex items-center justify-center relative w-full overflow-hidden mt-4">
+      <Globe className="mx-auto my-auto max-w-[320px] sm:max-w-[350px]" />
     </div>
   );
 };
 
-export const Globe = ({ className }: { className?: string }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+import dynamic from "next/dynamic";
 
-  useEffect(() => {
-    let phi = 0;
-
-    if (!canvasRef.current) return;
-
-    // Dynamically match canvas size to parent container
-    const resize = () => {
-      if (!canvasRef.current) return;
-      const { offsetWidth } = canvasRef.current.parentElement || {
-        offsetWidth: 400,
-      };
-      const size = Math.min(offsetWidth, 600); // cap at 600px
-      const globe = createGlobe(canvasRef.current, {
-        devicePixelRatio: 2,
-        width: size * 2,
-        height: size * 2,
-        phi: 0,
-        theta: 0,
-        dark: 1,
-        diffuse: 1.2,
-        mapSamples: 16000,
-        mapBrightness: 6,
-        baseColor: [0.3, 0.3, 0.3],
-        markerColor: [0.1, 0.8, 1],
-        glowColor: [1, 1, 1],
-        markers: [
-          { location: [37.7595, -122.4367], size: 0.03 },
-          { location: [40.7128, -74.006], size: 0.1 },
-        ],
-        onRender: (state) => {
-          state.phi = phi;
-          phi += 0.01;
-        },
-      });
-
-      return globe;
-    };
-
-    let globe = resize();
-
-    // Handle resize events
-    const handleResize = () => {
-      if (globe) globe.destroy();
-      globe = resize();
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      if (globe) globe.destroy();
-    };
-  }, []);
-
-  return (
-    <canvas
-      ref={canvasRef}
-      className={`w-full h-auto max-w-[600px] aspect-square ${className}`}
-    />
-  );
-};
+const Globe = dynamic(
+  () => import("./GlobeComponent").then((mod) => mod.Globe),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-[300px] h-[300px] rounded-full bg-neutral-100 dark:bg-neutral-800 animate-pulse mx-auto" />
+    ),
+  }
+);
 
 
 
@@ -346,15 +288,6 @@ export function CardSpotlightDemo() {
         )}
       </motion.div>
     </CardSpotlight>
-  );
-};
-
-const Step = ({ title }: { title: string }) => {
-  return (
-    <li className="flex gap-2 items-start">
-      <CheckIcon />
-      <p className="text-white">{title}</p>
-    </li>
   );
 };
 
